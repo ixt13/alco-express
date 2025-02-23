@@ -1,150 +1,308 @@
 .wrapper {
+	transition: all 0.2s ease;
 	height: 100vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
-	padding-left: 340px;
-	background-image: url('../../assets/images/whiskeyBg.png');
+	padding-left: 272px;
 
+	@media screen and (max-width: 1921px) {
+		padding-left: 218px;
+	}
+
+	@media screen and (max-width: 1364px) {
+		padding-left: 174px;
+	}
+
+	background-image: url('../../assets/images/whiskeyBg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right;
 }
 
 .loginForm {
+	transition: all 0.2s ease;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
-	@media screen and (min-width: 1920px) {
-		width: 708px;
+	width: 566px;
+
+	@media screen and (max-width: 1921px) {
+		width: 452px;
 	}
-	@media screen and (min-width: 1536px) {
+
+	@media screen and (max-width: 1364px) {
+		width: 362px;
 	}
 }
 
 .logoName {
+	transition: all 0.2s ease;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 16px;
+
 	h1 {
-		font-size: 64px;
 		margin-top: 8px;
 		color: #c90606;
+		font-size: 52px;
+
+		@media screen and (max-width: 1921px) {
+			font-size: 42px;
+		}
+
+		@media screen and (max-width: 1364px) {
+			font-size: 34px;
+		}
 	}
 }
 
 .form {
+	transition: all 0.2s ease;
+	padding: 40px;
+
+	@media screen and (max-width: 1921px) {
+		padding: 32px;
+	}
+
+	@media screen and (max-width: 1364px) {
+		padding: 26px;
+	}
+
 	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: rgba(113, 0, 0, 0.62);
-
 	gap: 36px;
-	@media screen and (min-width: 1920px) {
-		height: 564px;
-	}
 }
 
 .formTitle {
+	transition: all 0.2s ease;
 	color: #f5f5f5;
-	font-size: 46px;
+	font-size: 38px;
 	align-self: flex-start;
-	margin: 44px 0px 0px 44px;
+
+	@media screen and (max-width: 1921px) {
+		font-size: 30px;
+	}
+
+	@media screen and (max-width: 1364px) {
+		font-size: 24px;
+	}
 }
 
 .inputWrapp {
-	height: 72px;
+	transition: all 0.2s ease;
 	display: flex;
 	flex-direction: row;
+	width: 100%;
+	height: 58px;
+
+	@media screen and (max-width: 1921px) {
+		height: 46px;
+	}
+
+	@media screen and (max-width: 1364px) {
+		height: 37px;
+	}
 }
+
 .input {
+	transition: all 0.2s ease;
 	outline: unset;
 	border: unset;
-	font-size: 36px;
+	font-size: 26px;
+
+	@media screen and (max-width: 1921px) {
+		font-size: 20px;
+	}
+
+	@media screen and (max-width: 1364px) {
+		font-size: 16px;
+	}
+
 	background-color: #d9d9d9;
 	height: 100%;
 	border-radius: 0px 8px 8px 0px;
 	padding: 0px 8px 0px 8px;
+	width: 100%;
 
-	@media screen and (min-width: 1920px) {
-		width: 566px - 84px;
-	}
 	&::placeholder {
+		transition: all 0.2s ease;
 		padding: 0px 8px 0px 8px;
-		font-size: 30px;
+		font-size: 26px;
+
+		@media screen and (max-width: 1921px) {
+			font-size: 20px;
+		}
+
+		@media screen and (max-width: 1364px) {
+			font-size: 16px;
+		}
 	}
 }
+
 .inputIcon {
-	padding: 14px 20px 14px 20px;
+	transition: all 0.2s ease;
 	background-color: #c36f09;
-	width: 84px;
+	min-width: 68px;
+	padding: 10px 16px 10px 16px;
 	height: 100%;
 	border-radius: 8px 0px 0px 8px;
+
+	@media screen and (max-width: 1921px) {
+		min-width: 54px;
+		padding: 8px 12px 8px 12px;
+	}
+
+	@media screen and (max-width: 1364px) {
+		min-width: 43px;
+		padding: 6px 10px 6px 10px;
+	}
 }
 
 .inputBotContainer {
-	width: 566px;
+	transition: all 0.2s ease;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
 	button {
+		transition: all 0.2s ease;
 		border: none;
 		cursor: pointer;
-		height: 60px;
-		width: 166px;
+		height: 48px;
+		width: 133px;
+		font-size: 22px;
 		border-radius: 8px;
 		background-color: #c36f09;
-		font-size: 28px;
 		color: currentColor;
+
+		@media screen and (max-width: 1921px) {
+			height: 38px;
+			width: 106px;
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: 1364px) {
+			height: 30px;
+			width: 85px;
+			font-size: 15px;
+		}
 	}
 }
+
 .checkboxContainer {
+	transition: all 0.2s ease;
 	display: flex;
 	justify-content: center;
 	gap: 12px;
-	input {
-		position: relative;
-		height: 26px;
-		width: 26px;
-		cursor: pointer;
-	}
-	input[type='checkbox'] {
-		appearance: none;
 
+	input {
+		transition: all 0.2s ease;
+		position: relative;
+		height: 22px;
+		width: 22px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+
+		@media screen and (max-width: 1921px) {
+			height: 18px;
+			width: 18px;
+		}
+
+		@media screen and (max-width: 1364px) {
+			height: 15px;
+			width: 15px;
+		}
+	}
+
+	input[type='checkbox'] {
+		transition: all 0.2s ease;
+		appearance: none;
 		border: 2px solid #ccc;
 		border-radius: 4px;
 		background-color: white;
 		cursor: pointer;
-		transition: all 0.2s ease;
 	}
+
 	input[type='checkbox']:checked::after {
+		transition: all 0.2s ease;
 		content: '✔';
-		position: absolute;
-		left: 5px;
-		top: 2px;
+		position: relative;
 		color: white;
-		font-size: 14px;
+		font-size: 12px;
+
+		@media screen and (max-width: 1921px) {
+			font-size: 10px;
+		}
+
+		@media screen and (max-width: 1364px) {
+			font-size: 8px;
+		}
 	}
+
 	input:checked {
+		transition: all 0.2s ease;
 		background-color: #c36f09;
 		border-color: #c36f09;
 	}
+
 	.checkboxTextContent {
-		font-size: 24px;
+		transition: all 0.2s ease;
+		font-size: 20px;
+
+		@media screen and (max-width: 1921px) {
+			font-size: 16px;
+		}
+
+		@media screen and (max-width: 1364px) {
+			font-size: 12px;
+		}
+
 		cursor: pointer;
 	}
 }
 
 .bottomLinks {
-	font-size: 24px;
+	transition: all 0.2s ease;
+	font-size: 20px;
+
+	@media screen and (max-width: 1921px) {
+		font-size: 16px;
+	}
+
+	@media screen and (max-width: 1364px) {
+		font-size: 13px;
+	}
+
 	a {
+		transition: all 0.2s ease;
 		text-decoration: none;
 		color: #f5cc00;
 
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+}
+
+.logo {
+	transition: all 0.2s ease;
+	height: 68px;
+	width: 54px;
+
+	@media screen and (max-width: 1921px) {
+		height: 54px;
+		width: 42px;
+	}
+
+	@media screen and (max-width: 1364px) {
+		height: 44px;
+		width: 34px;
 	}
 }

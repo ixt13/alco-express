@@ -10,7 +10,7 @@ export default function Login() {
 			<div className={sty.loginForm}>
 				<div className={sty.logoName}>
 					<h1>AlcoExpress </h1>
-					<Image src={logo} alt='AlcoExpressLogo' width={68} height={86} />
+					<Image src={logo} alt='AlcoExpressLogo' className={sty.logo} />
 				</div>
 				<form className={sty.form} action='submit'>
 					<h3 className={sty.formTitle}>Anmelden</h3>
