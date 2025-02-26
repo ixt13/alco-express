@@ -200,7 +200,7 @@
 	transition: all 0.2s ease;
 	outline: unset;
 	border: unset;
-	font-size: 26px;
+
 	background-color: #d9d9d9;
 	height: 100%;
 	border-radius: 0px 8px 8px 0px;
@@ -208,7 +208,7 @@
 	width: 100%;
 
 	@media (max-width: 480px) {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	@media (min-width: 481px) and (max-width: 768px) {
