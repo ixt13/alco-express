@@ -22,7 +22,12 @@ export default function Login() {
 								<Image src={userLogo} alt='userLogo' fill></Image>
 							</div>
 						</div>
-						<input className={sty.input} type='email' placeholder='E-Mail' />
+						<input
+							className={sty.input}
+							type='email'
+							placeholder='E-Mail'
+							autoComplete='email'
+						/>
 					</div>
 
 					<div className={sty.inputWrapp}>
@@ -37,6 +42,7 @@ export default function Login() {
 							className={sty.input}
 							type='password'
 							placeholder='Passwort'
+							autoComplete='current-password'
 						/>
 					</div>
 					<div className={sty.inputBotContainer}>
