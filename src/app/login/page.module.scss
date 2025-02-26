@@ -56,7 +56,7 @@
 	}
 
 	@media (min-width: 1441px) {
-		width: 40%;
+		width: 500px;
 	}
 }
 
@@ -233,7 +233,7 @@
 
 	&::placeholder {
 		transition: all 0.2s ease;
-		padding: 0px 8px 0px 8px;
+
 		font-size: 26px;
 
 		@media (max-width: 480px) {
