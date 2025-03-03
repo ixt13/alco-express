@@ -2,8 +2,21 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	user-select: none;
+	-webkit-user-select: none;
 }
 body {
 	background-color: #020213;
 	color: #f5f5f5;
+}
+
+button:active,
+a:active {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+button:focus,
+a:focus {
+	outline: none;
 }
