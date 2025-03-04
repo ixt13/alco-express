@@ -1,42 +1,32 @@
-import brandLogoIcon from '@/assets/images/brandLogoIcon.png'
 import { Header } from '@/UI/Components/Header/Header'
-import { CartSVG } from '@/UI/Components/SvgComponents/CartSVG'
-import { SearchSVG } from '@/UI/Components/SvgComponents/SearchSVG'
-import Image from 'next/image'
+import { FilterSVG } from '@/UI/Components/SvgComponents/FilterSVG'
+import { TopSide } from '@/UI/Components/TopSide/TopSide'
 import sty from './page.module.scss'
 
+import { Item } from '@/UI/Components/Item/Item'
 export default function Home() {
 	return (
 		<div className={sty.wrapper}>
 			<Header />
-			<div className={sty.topSide}>
-				<div className={sty.siteNameContainer}>
-					<div className={sty.titleTextBox}>
-						<p className={sty.title}>AlcoExpress</p>
-						<p className={sty.slogan}>
-							Wir bringen den Genuss zu Ihnen nach Hause!
-						</p>
+			<TopSide />
+			<div className={sty.homeWrapper}>
+				<div className={sty.homePageContent}>
+					<h3>Alle Produkte </h3>
+
+					<div className={sty.filterAndSort}>
+						<FilterSVG className={sty.filterAndSortIcon} />
+						<p>Filter and Sort </p>
 					</div>
 
-					<Image
-						src={brandLogoIcon}
-						alt='brandLogoIcon'
-						className={sty.brandLogoIcon}
-					></Image>
-				</div>
-				<div className={sty.inputBox}>
-					<input type='text' placeholder='Search ' />
-					<SearchSVG className={sty.searchIcon} />
-				</div>
-				<div className={sty.rightSide}>
-					<div className={sty.rightSideBox}>
-						<CartSVG className={sty.rightSideIcon} />
-
-						<div className={sty.cartBox}>
-							<div className={sty.cartCount}>
-								<p>{'33'}</p>
-							</div>
-						</div>
+					<div className={sty.itemsContainer}>
+						<Item />
+						<Item />
+						<Item />
+						<Item />
+						<Item />
+						<Item />
+						<Item />
+						<Item />
 					</div>
 				</div>
 			</div>
