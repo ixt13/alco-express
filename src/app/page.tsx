@@ -1,43 +1,43 @@
-import brendLogoIcon from '@/assets/images/brendLogoIcon.png'
-import phoneIcon from '@/assets/images/phoneIcon.png'
-import { phoneNumber } from '@/constants/basicConsts'
+import brandLogoIcon from '@/assets/images/brandLogoIcon.png'
+import { Header } from '@/UI/Components/Header/Header'
+import { CartSVG } from '@/UI/Components/SvgComponents/CartSVG'
+import { SearchSVG } from '@/UI/Components/SvgComponents/SearchSVG'
 import Image from 'next/image'
 import sty from './page.module.scss'
+
 export default function Home() {
 	return (
 		<div className={sty.wrapper}>
-			<div className={sty.header}>
-				<Image
-					src={phoneIcon}
-					alt='phoneIcon'
-					className={sty.headerPhoneIcon}
-				/>
-				<div className={sty.phoneNumberBlock}>
-					<p>Suport line </p>
-					<a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
-				</div>
-				<div className={sty.languageSelect}>
-					<button>{'DE'}</button>
-
-					<button>{'RO'}</button>
-
-					<button>{'RU'}</button>
-				</div>
-			</div>
-			<div className={sty.secondHeader}>
+			<Header />
+			<div className={sty.topSide}>
 				<div className={sty.siteNameContainer}>
-					<div className={sty.siteName}>
-						<p>AlcoExpress</p>
-						<Image
-							src={brendLogoIcon}
-							alt='brendLogoIcon'
-							className={sty.brendLogoIcon}
-						></Image>
+					<div className={sty.titleTextBox}>
+						<p className={sty.title}>AlcoExpress</p>
+						<p className={sty.slogan}>
+							Wir bringen den Genuss zu Ihnen nach Hause!
+						</p>
 					</div>
-					<p>Wir bringen den Genuss zu Ihnen nach Hause!</p>
+
+					<Image
+						src={brandLogoIcon}
+						alt='brandLogoIcon'
+						className={sty.brandLogoIcon}
+					></Image>
 				</div>
-				<div>
-					<input type='text' placeholder='Search in katalog' />
+				<div className={sty.inputBox}>
+					<input type='text' placeholder='Search ' />
+					<SearchSVG className={sty.searchIcon} />
+				</div>
+				<div className={sty.rightSide}>
+					<div className={sty.rightSideBox}>
+						<CartSVG className={sty.rightSideIcon} />
+
+						<div className={sty.cartBox}>
+							<div className={sty.cartCount}>
+								<p>{'33'}</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
