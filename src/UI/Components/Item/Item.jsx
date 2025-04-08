@@ -1,6 +1,6 @@
 import bottleImage from '@/assets/images/brockmans.png'
 import Image from 'next/image'
-import { CartSVG } from '../SvgComponents/CartSVG'
+import { Counter } from '../Counter/Counter'
 import sty from './Item.module.scss'
 export const Item = () => {
 	return (
@@ -13,12 +13,7 @@ export const Item = () => {
 
 			<Image src={bottleImage} className={sty.bottleImage} alt='bottle' />
 			<p className={sty.secondText}>€32.34</p>
-			<div className={sty.itemCounter}>
-				<div className={sty.counter}>+1-</div>
-				<div className={sty.cartBox}>
-					<CartSVG className={sty.cartIcon}></CartSVG>
-				</div>
-			</div>
+			<Counter className={sty.ItemCounterSize} />
 		</div>
 	)
 }

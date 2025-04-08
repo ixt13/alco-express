@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<div className={sty.wrapper}>
 			<Header />
-			<TopSide />
+			<TopSide cart search />
 			<div className={sty.homeWrapper}>
 				<div className={sty.homePageContent}>
 					<h3>Alle Produkte </h3>
