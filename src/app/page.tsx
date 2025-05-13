@@ -1,35 +1,29 @@
-import { Header } from '@/UI/Components/Header/Header'
-import { FilterSVG } from '@/UI/Components/SvgComponents/FilterSVG'
-import { TopSide } from '@/UI/Components/TopSide/TopSide'
 import sty from './page.module.scss'
 
-import { Item } from '@/UI/Components/Item/Item'
-export default function Home() {
+import { BrandLogo } from '@/UI/Components/BrandLogo/BrandLogo'
+import { SearchInputMobile } from '@/UI/Components/SearchInputMobile/SearchInputMobile'
+import { SearchInput } from '@/UI/Components/SeatchInput/SearchInput'
+import { SeparatorLine } from '@/UI/Components/SeparatorLine/SeparatorLine'
+import { UserCartPanel } from '@/UI/Components/UserCartPanel/UserCartPanel'
+import { Home } from '@/UI/Screens/Home/Home'
+export default function page() {
 	return (
 		<div className={sty.wrapper}>
-			<Header />
-			<TopSide cart search />
-			<div className={sty.homeWrapper}>
-				<div className={sty.homePageContent}>
-					<h3>Alle Produkte </h3>
-
-					<div className={sty.filterAndSort}>
-						<FilterSVG className={sty.filterAndSortIcon} />
-						<p>Filter and Sort </p>
-					</div>
-
-					<div className={sty.itemsContainer}>
-						<Item />
-						<Item />
-						<Item />
-						<Item />
-						<Item />
-						<Item />
-						<Item />
-						<Item />
-					</div>
-				</div>
+			<div
+				style={{
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'space-around',
+					padding: '1rem 0rem',
+				}}
+			>
+				<BrandLogo />
+				<SearchInput />
+				<UserCartPanel />
 			</div>
+			<SearchInputMobile />
+			<SeparatorLine />
+			<Home />
 		</div>
 	)
 }

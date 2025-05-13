@@ -19,9 +19,6 @@ export const TopSide = ({ cart, search }: iTopSide) => {
 				<div className={sty.siteNameContainer}>
 					<div className={sty.titleTextBox}>
 						<p className={sty.title}>AlcoExpress</p>
-						<p className={sty.slogan}>
-							Wir bringen den Genuss zu Ihnen nach Hause!
-						</p>
 					</div>
 
 					<Image

@@ -1,8 +1,4 @@
-.wrapper {
-	height: 100vh;
-	width: 100%;
-}
-.header {
+.topContainer {
 	width: 100%;
 	background-color: #770404;
 	display: flex;
@@ -207,88 +203,6 @@
 	@media (min-width: 1441px) {
 	}
 }
-.rightSideIcon {
-	display: flex;
-	flex-direction: row;
-	cursor: pointer;
-	fill: #ebebeb;
-	opacity: 60%;
-
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		min-height: 30px;
-		min-width: 30px;
-		max-height: 30px;
-		max-width: 30px;
-		&:active {
-			opacity: 100%;
-		}
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		min-height: 32px;
-		min-width: 32px;
-		max-height: 32px;
-		max-width: 32px;
-		&:active {
-			opacity: 100%;
-		}
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		min-height: 34px;
-		min-width: 34px;
-		max-height: 34px;
-		max-width: 34px;
-		&:active {
-			opacity: 100%;
-		}
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		min-height: 36px;
-		min-width: 36px;
-		max-height: 36px;
-		max-width: 36px;
-		&:hover {
-			opacity: 100%;
-		}
-		&:active {
-			fill: #c7c7c7;
-		}
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		min-height: 38px;
-		min-width: 38px;
-		max-height: 38px;
-		max-width: 38px;
-		&:hover {
-			opacity: 100%;
-		}
-		&:active {
-			fill: #c7c7c7;
-		}
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		min-height: 40px;
-		min-width: 40px;
-		max-height: 40px;
-		max-width: 40px;
-		&:hover {
-			opacity: 100%;
-		}
-		&:active {
-			fill: #c7c7c7;
-		}
-	}
-}
 
 .burger {
 	display: flex;
@@ -363,43 +277,34 @@
 	border-bottom: 2px solid #f5f5f5;
 }
 
-.userPopup {
-	transition: all 0.2s ease;
-	position: fixed;
-	height: 100%;
-	width: 200px;
-	background-color: #a63c06;
-	z-index: 2;
-	overflow: hidden;
-	right: 0;
-	top: 0; // Мобильные устройства (телефоны, до 480px)
+.slogan {
+	// Мобильные устройства (телефоны, до 480px)
 	@media (max-width: 480px) {
+		font-size: 4px;
 	}
 
 	// Маленькие планшеты (от 481px до 768px)
 	@media (min-width: 481px) and (max-width: 768px) {
+		font-size: 6px;
 	}
 
 	// Большие планшеты (от 769px до 1024px)
 	@media (min-width: 769px) and (max-width: 1024px) {
+		font-size: 7px;
 	}
 
 	// Маленькие ноутбуки (от 1025px до 1280px)
 	@media (min-width: 1025px) and (max-width: 1280px) {
+		font-size: 9px;
 	}
 
 	// Ноутбуки и десктопы (от 1281px до 1440px)
 	@media (min-width: 1281px) and (max-width: 1440px) {
+		font-size: 13px;
 	}
 
 	// Большие экраны (от 1441px и выше)
 	@media (min-width: 1441px) {
+		font-size: 17px;
 	}
-}
-.visible {
-	visibility: visible;
-}
-.hidden {
-	visibility: visible;
-	transform: translate(228px);
 }

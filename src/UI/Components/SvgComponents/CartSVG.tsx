@@ -4,11 +4,7 @@ interface iSvg {
 
 export const CartSVG = ({ className }: iSvg) => {
 	return (
-		<svg
-			className={className}
-			viewBox='0 0 330 330'
-			xmlns='http://www.w3.org/2000/svg'
-		>
+		<svg className={className} viewBox='0 0 330 330'>
 			<path
 				fillRule='evenodd'
 				clipRule='evenodd'

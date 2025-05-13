@@ -1,3 +1,4 @@
+import { Header } from '@/UI/Components/Header/Header'
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import './global.css'
@@ -22,7 +23,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${geistSans.variable} `}>{children}</body>
+			<body className={`${geistSans.variable} `}>
+				<Header />
+				{children}
+			</body>
 		</html>
 	)
 }
