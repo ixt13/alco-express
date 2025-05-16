@@ -15,13 +15,13 @@ export const Counter = ({ className }: iCounter) => {
 	const [quantity, setQuantity] = useState<number>(0)
 
 	const handleIncrement = () => {
-		taptic('success')
+		taptic()
 		setQuantity(prev => prev + 1)
 	}
 	const handleDecrement = () => {
 		setQuantity(prev => {
 			if (prev > 0) {
-				taptic('success')
+				taptic()
 				return prev - 1
 			}
 			return prev
