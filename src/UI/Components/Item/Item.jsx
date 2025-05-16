@@ -5,14 +5,19 @@ import sty from './Item.module.scss'
 export const Item = () => {
 	return (
 		<div className={sty.item}>
-			<div className={sty.itemNameTextContent}>
-				<p className={sty.brandName}>Brockmans</p>
-				<p className={sty.secondText}>Orange Kiss</p>
-				<p className={sty.secondText}>70 cl</p>
+			<div className={sty.itemName}>
+				<p>Brockmans</p>
+				<p>Orange Kiss ,70 cl </p>
+			</div>
+			<div className={sty.image}>
+				<Image src={bottleImage} className={sty.imageSource} alt='bottle' />
 			</div>
 
-			<Image src={bottleImage} className={sty.bottleImage} alt='bottle' />
-			<p className={sty.secondText}>€32.34</p>
+			<div className={sty.price}>
+				<p className={sty.valute}>€</p>
+				<p className={sty.pric}>32.34</p>
+			</div>
+
 			<Counter className={sty.ItemCounterSize} />
 		</div>
 	)

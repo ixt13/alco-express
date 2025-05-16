@@ -1,243 +1,41 @@
 .item {
+	aspect-ratio: 6/7;
 	background-color: rgba(119, 4, 4, 0.6);
-	border-radius: 8px;
-	aspect-ratio: 4/6;
-	width: 100%;
-	padding: 8px;
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
-
 	flex-direction: column;
-}
-
-.bottleImage {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		width: 80px;
-		height: 240px;
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		width: 50px;
-		height: 160px;
-	}
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		width: 50px;
-		height: 160px;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		width: 80px;
-		height: 240px;
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		width: 70px;
-		height: 220px;
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		width: 90px;
-		height: 260px;
-	}
-}
-
-.cartBox {
-	width: 50%;
-	height: 100%;
-	border-left: 2px solid #fff;
-	background-color: #a63c06;
-	border-radius: 0px 6px 6px 0px;
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	padding: 4px 4px 4px 2px;
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		&:hover {
-			background-color: #77040499;
-		}
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		&:hover {
-			background-color: #77040499;
-		}
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		&:hover {
-			background-color: #77040499;
-		}
-	}
-}
-
-.cartIcon {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	fill: #ebebeb;
-	opacity: 100%;
-
-	&:active {
-		fill: #c7c7c7;
-	}
+	justify-content: space-between;
+	padding: 1rem;
 }
 
 .itemName {
-	font-size: 12px;
-}
-.flavor {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		font-size: 12px;
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		font-size: 12px;
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 12px;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
+	width: 100%;
+	text-align: center;
+	p {
+		font-size: 1.2rem;
 	}
 }
-
-.vol {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 12px;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-	}
-}
-
-.brandName {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		font-size: 28px;
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		font-size: 20px;
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 20px;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		font-size: 22px;
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		font-size: 22px;
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		font-size: 28px;
-	}
-}
-
-.secondText {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		font-size: 20px;
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		font-size: 16px;
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 16px;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		font-size: 17px;
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		font-size: 17px;
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		font-size: 20px;
-	}
-}
-
-.itemNameTextContent {
+.image {
 	display: flex;
-	flex-direction: column;
-
-	justify-content: center;
 	align-items: center;
-	gap: 2px;
+	justify-content: center;
+	height: clamp(55%, 60%, 60%);
+}
+
+.imageSource {
+	height: 100%;
+
+	object-fit: contain;
+}
+
+.price {
+	display: flex;
+	flex-direction: row;
+	font-size: 1.1rem;
+	height: 10%;
 }
 
 .ItemCounterSize {
-	height: 10%;
-	width: 40%;
+	height: 12%;
+	width: 100%;
 }

@@ -103,6 +103,6 @@
 
 	// Большие экраны (от 1441px и выше)
 	@media (min-width: 1441px) {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 6fr);
 	}
 }

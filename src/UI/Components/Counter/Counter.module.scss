@@ -5,18 +5,30 @@
 	justify-content: center;
 	border: 2px solid white;
 	border-radius: 6px;
+	position: relative;
 }
 
 .counter {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50%;
+	flex: 0 0 50%;
 	height: 100%;
+
+	button {
+		outline: none;
+		border: none;
+		background-color: transparent;
+		color: white;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
 }
 
 .cartBox {
-	width: 50%;
+	flex: 0 0 50%;
 	height: 100%;
 	border-left: 2px solid #fff;
 	background-color: #a63c06;
@@ -35,6 +47,9 @@
 
 	// Большие планшеты (от 769px до 1024px)
 	@media (min-width: 769px) and (max-width: 1024px) {
+		&:hover {
+			background-color: #77040499;
+		}
 	}
 
 	// Маленькие ноутбуки (от 1025px до 1280px)
@@ -70,4 +85,20 @@
 	&:active {
 		fill: #c7c7c7;
 	}
+}
+
+.quantityBtn {
+	fill: white;
+	height: 100%;
+	padding: 4px;
+}
+
+.quantityBox {
+	border-radius: 50%;
+
+	aspect-ratio: 1/1;
+	min-height: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
