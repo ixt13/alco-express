@@ -16,7 +16,14 @@ a:active {
 	box-shadow: none;
 	-webkit-tap-highlight-color: transparent;
 }
-
+button,
+a,
+input,
+textarea {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	outline: none;
+}
 button:focus,
 a:focus {
 	outline: none;
