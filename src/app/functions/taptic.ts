@@ -1,6 +1,6 @@
 export const taptic = (type: 'success' | 'error' | 'warning') => {
 	if (typeof window !== 'undefined' && 'navigator' in window) {
-		const navigator = window.navigator as any
+		const navigator = window.navigator
 		if (navigator.vibrate) {
 			switch (type) {
 				case 'success':
