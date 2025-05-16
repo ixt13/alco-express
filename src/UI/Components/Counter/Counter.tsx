@@ -50,7 +50,7 @@ export const Counter = ({ className }: iCounter) => {
 				</button>
 			</div>
 			<div className={sty.cartBox}>
-				<CartSVG className={sty.cartIcon}></CartSVG>
+				<CartSVG className={sty.cartIcon} />
 			</div>
 		</div>
 	)

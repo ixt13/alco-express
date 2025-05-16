@@ -28,178 +28,160 @@
 		height: 160px;
 	}
 
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		width: 80px;
-		height: 240px;
+	.flavor {
+		// Мобильные устройства (телефоны, до 480px)
+		@media (max-width: 480px) {
+			font-size: 12px;
+		}
+
+		// Маленькие планшеты (от 481px до 768px)
+		@media (min-width: 481px) and (max-width: 768px) {
+			font-size: 12px;
+		}
+
+		// Большие планшеты (от 769px до 1024px)
+		@media (min-width: 769px) and (max-width: 1024px) {
+			font-size: 12px;
+		}
+
+		// Маленькие ноутбуки (от 1025px до 1280px)
+		@media (min-width: 1025px) and (max-width: 1280px) {
+		}
+
+		// Ноутбуки и десктопы (от 1281px до 1440px)
+		@media (min-width: 1281px) and (max-width: 1440px) {
+		}
+
+		// Большие экраны (от 1441px и выше)
+		@media (min-width: 1441px) {
+		}
 	}
 
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		width: 70px;
-		height: 220px;
+	.vol {
+		// Мобильные устройства (телефоны, до 480px)
+		@media (max-width: 480px) {
+		}
+
+		// Маленькие планшеты (от 481px до 768px)
+		@media (min-width: 481px) and (max-width: 768px) {
+		}
+
+		// Большие планшеты (от 769px до 1024px)
+		@media (min-width: 769px) and (max-width: 1024px) {
+			font-size: 12px;
+		}
+
+		// Маленькие ноутбуки (от 1025px до 1280px)
+		@media (min-width: 1025px) and (max-width: 1280px) {
+		}
+
+		// Ноутбуки и десктопы (от 1281px до 1440px)
+		@media (min-width: 1281px) and (max-width: 1440px) {
+		}
+
+		// Большие экраны (от 1441px и выше)
+		@media (min-width: 1441px) {
+		}
 	}
 
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		width: 90px;
-		height: 260px;
-	}
-}
+	.brandName {
+		// Мобильные устройства (телефоны, до 480px)
+		@media (max-width: 480px) {
+			font-size: 28px;
+		}
 
-.flavor {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		font-size: 12px;
-	}
+		// Маленькие планшеты (от 481px до 768px)
+		@media (min-width: 481px) and (max-width: 768px) {
+			font-size: 20px;
+		}
 
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		font-size: 12px;
-	}
+		// Большие планшеты (от 769px до 1024px)
+		@media (min-width: 769px) and (max-width: 1024px) {
+			font-size: 20px;
+		}
 
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 12px;
-	}
+		// Маленькие ноутбуки (от 1025px до 1280px)
+		@media (min-width: 1025px) and (max-width: 1280px) {
+			font-size: 22px;
+		}
 
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-	}
+		// Ноутбуки и десктопы (от 1281px до 1440px)
+		@media (min-width: 1281px) and (max-width: 1440px) {
+			font-size: 22px;
+		}
 
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-	}
-}
-
-.vol {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
+		// Большие экраны (от 1441px и выше)
+		@media (min-width: 1441px) {
+			font-size: 28px;
+		}
 	}
 
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
+	.secondText {
+		// Мобильные устройства (телефоны, до 480px)
+		@media (max-width: 480px) {
+			font-size: 20px;
+		}
+
+		// Маленькие планшеты (от 481px до 768px)
+		@media (min-width: 481px) and (max-width: 768px) {
+			font-size: 16px;
+		}
+
+		// Большие планшеты (от 769px до 1024px)
+		@media (min-width: 769px) and (max-width: 1024px) {
+			font-size: 16px;
+		}
+
+		// Маленькие ноутбуки (от 1025px до 1280px)
+		@media (min-width: 1025px) and (max-width: 1280px) {
+			font-size: 17px;
+		}
+
+		// Ноутбуки и десктопы (от 1281px до 1440px)
+		@media (min-width: 1281px) and (max-width: 1440px) {
+			font-size: 17px;
+		}
+
+		// Большие экраны (от 1441px и выше)
+		@media (min-width: 1441px) {
+			font-size: 20px;
+		}
 	}
 
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 12px;
+	.itemNameTextContent {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+		align-items: center;
+		gap: 2px;
 	}
 
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
+	.itemTextContent {
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+		justify-content: space-between;
+		gap: 2px;
 	}
 
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
+	.cartCounter {
+		width: 60%;
+		height: 20%;
+		object-fit: contain;
 	}
 
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-	}
-}
-
-.brandName {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		font-size: 28px;
+	.cartCounterContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
 	}
 
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		font-size: 20px;
+	.totalAndDelete {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 20px;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		font-size: 22px;
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		font-size: 22px;
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		font-size: 28px;
-	}
-}
-
-.secondText {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		font-size: 20px;
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		font-size: 16px;
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 16px;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		font-size: 17px;
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		font-size: 17px;
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		font-size: 20px;
-	}
-}
-
-.itemNameTextContent {
-	display: flex;
-	flex-direction: column;
-
-	justify-content: center;
-	align-items: center;
-	gap: 2px;
-}
-
-.itemTextContent {
-	display: flex;
-	flex-direction: column;
-
-	align-items: center;
-	justify-content: space-between;
-	gap: 2px;
-}
-
-.cartCounter {
-	width: 60%;
-	height: 20%;
-	object-fit: contain;
-}
-
-.cartCounterContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-.totalAndDelete {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
