@@ -69,9 +69,7 @@
 	height: 100%;
 	aspect-ratio: 1/1;
 	padding: 4px;
-	&:active {
-		fill: currentColor;
-	}
+
 	@media (min-width: 1025px) {
 		&:hover {
 			transform: scale(1.1);
