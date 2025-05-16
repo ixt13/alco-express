@@ -5,7 +5,10 @@
 }
 
 .filterAndSortIcon {
+	color: currentColor;
+	cursor: pointer;
 	// Мобильные устройства (телефоны, до 480px)
+
 	@media (max-width: 480px) {
 		width: 24px;
 		height: 18px;
@@ -52,6 +55,23 @@
 	gap: 12px;
 	p {
 		font-size: 18px;
+	}
+}
+
+.filterAndSortItem {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+	cursor: pointer;
+	@media (min-width: 1025px) {
+		&:hover {
+			color: rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 1);
 	}
 }
 .homeWrapper {

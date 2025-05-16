@@ -7,9 +7,12 @@ export const UserCartPanel = () => {
 		<div className={sty.topSide}>
 			<div className={sty.topSideContainer}>
 				<div className={sty.rightSide}>
-					<UserSVG className={sty.rightSideIcon} />
-					<p>Login</p>
-					<div className={sty.rightSideBox}>
+					<div className={sty.userContainer}>
+						<UserSVG className={sty.rightSideIcon} />
+						<p>Login</p>
+					</div>
+
+					<div className={sty.cartContainer}>
 						<CartSVG className={sty.rightSideIcon} />
 
 						<div className={sty.cartCount}>

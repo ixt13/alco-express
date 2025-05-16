@@ -9,8 +9,10 @@ export const Home = () => {
 				<h3>All Products</h3>
 
 				<div className={sty.filterAndSort}>
-					<FilterSVG className={sty.filterAndSortIcon} />
-					<p>Filter and Sort </p>
+					<div className={sty.filterAndSortItem}>
+						<FilterSVG className={sty.filterAndSortIcon} />
+						<p>Filter and Sort </p>
+					</div>
 				</div>
 
 				<div className={sty.itemsContainer}>

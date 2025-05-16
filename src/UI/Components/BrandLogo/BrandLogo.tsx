@@ -2,9 +2,10 @@ import Image from 'next/image'
 import sty from './BrandLogo.module.scss'
 
 import brandLogoIcon from '@/assets/images/cleanBrandIcon.png'
+import Link from 'next/link'
 export const BrandLogo = () => {
 	return (
-		<div className={sty.siteNameContainer}>
+		<Link href={'/'} className={sty.siteNameContainer}>
 			<div className={sty.titleTextBox}>
 				<p className={sty.title}>AlcoExpress</p>
 			</div>
@@ -13,6 +14,6 @@ export const BrandLogo = () => {
 				alt='brandLogoIcon'
 				className={sty.brandLogoIcon}
 			></Image>
-		</div>
+		</Link>
 	)
 }

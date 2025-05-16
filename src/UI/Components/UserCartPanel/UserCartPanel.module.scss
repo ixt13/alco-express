@@ -7,12 +7,9 @@
 
 .topSideContainer {
 	display: flex;
-
 	justify-content: space-around;
-
 	align-items: center;
 	flex-direction: row;
-
 	// Мобильные устройства (телефоны, до 480px)
 	@media (max-width: 480px) {
 		gap: 30px;
@@ -48,9 +45,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	cursor: pointer;
-	fill: #ebebeb;
-	opacity: 60%;
+	fill: currentColor;
 
 	// Мобильные устройства (телефоны, до 480px)
 	@media (max-width: 480px) {
@@ -58,9 +53,6 @@
 		min-width: 30px;
 		max-height: 30px;
 		max-width: 30px;
-		&:active {
-			opacity: 100%;
-		}
 	}
 
 	// Маленькие планшеты (от 481px до 768px)
@@ -69,9 +61,6 @@
 		min-width: 32px;
 		max-height: 32px;
 		max-width: 32px;
-		&:active {
-			opacity: 100%;
-		}
 	}
 
 	// Большие планшеты (от 769px до 1024px)
@@ -80,9 +69,6 @@
 		min-width: 34px;
 		max-height: 34px;
 		max-width: 34px;
-		&:active {
-			opacity: 100%;
-		}
 	}
 
 	// Маленькие ноутбуки (от 1025px до 1280px)
@@ -91,12 +77,6 @@
 		min-width: 36px;
 		max-height: 36px;
 		max-width: 36px;
-		&:hover {
-			opacity: 100%;
-		}
-		&:active {
-			fill: #c7c7c7;
-		}
 	}
 
 	// Ноутбуки и десктопы (от 1281px до 1440px)
@@ -105,12 +85,6 @@
 		min-width: 38px;
 		max-height: 38px;
 		max-width: 38px;
-		&:hover {
-			opacity: 100%;
-		}
-		&:active {
-			fill: #c7c7c7;
-		}
 	}
 
 	// Большие экраны (от 1441px и выше)
@@ -122,61 +96,52 @@
 		&:hover {
 			opacity: 100%;
 		}
-		&:active {
-			fill: #c7c7c7;
-		}
+	}
+}
+.userContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 6px;
+	color: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+	&:active {
+		color: rgba(255, 255, 255, 1);
+	}
+	p {
+		font-size: 1.2rem;
+		color: currentColor;
 	}
 }
 
-.rightSideBox {
+.cartContainer {
 	position: relative;
 	display: flex;
+	gap: 6px;
 	flex-direction: row;
-	gap: 4px;
+	cursor: pointer;
 	justify-content: center;
 	align-items: center;
-	p {
-		font-size: 24px;
-	}
+	color: rgba(255, 255, 255, 0.6);
 
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (max-width: 1024px) {
+	&:active {
+		color: rgba(255, 255, 255, 1);
 	}
 
 	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
+	@media (min-width: 1025px) {
 	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-	}
-}
-
-.cartBox {
 }
 
 .cartCount {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 50%;
 
 	p {
+		position: relative;
 		color: rgb(201, 6, 6);
-		font-size: 22px;
+		font-size: 29px;
 		font-weight: 500;
-		opacity: 100%;
 	}
 }
