@@ -18,14 +18,20 @@
 	button {
 		all: unset;
 		background-color: transparent;
-
-		color: #c7c7c7;
-		height: 100%;
-		display: flex;
-		align-items: center;
+		box-shadow: none;
+		color: inherit;
 		cursor: pointer;
+		outline: none;
+		-webkit-tap-highlight-color: transparent;
+
+		&:focus,
+		&:focus-visible {
+			outline: none;
+		}
+
 		&:active {
-			color: white;
+			background-color: transparent;
+			box-shadow: none;
 		}
 	}
 }
