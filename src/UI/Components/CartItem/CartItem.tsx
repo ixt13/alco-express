@@ -6,12 +6,14 @@ import sty from './CartItem.module.scss'
 export const CartItem = () => {
 	return (
 		<div className={sty.item}>
-			<Image src={bottleImage} className={sty.bottleImage} alt='bottle' />
+			<div className={sty.imageContainer}>
+				<Image src={bottleImage} className={sty.bottleImage} alt='bottle' />
+			</div>
+
 			<div className={sty.itemTextContent}>
-				<div className={sty.itemNameTextContent}>
-					<p className={sty.brandName}>Brockmans</p>
-					<p className={sty.secondText}>Orange Kiss</p>
-					<p className={sty.secondText}>70 cl</p>
+				<div className={sty.itemText}>
+					<p>Brockmans</p>
+					<p>Orange Kiss ,70 cl </p>
 				</div>
 				<p className={sty.secondText}>€32.34</p>
 			</div>

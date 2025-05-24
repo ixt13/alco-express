@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { CartSVG } from '../SvgComponents/CartSVG'
 import { UserSVG } from '../SvgComponents/UserSVG'
 import sty from './UserCartPanel.module.scss'
@@ -12,13 +13,13 @@ export const UserCartPanel = () => {
 						<p>Login</p>
 					</div>
 
-					<div className={sty.cartContainer}>
+					<Link href={'/cart'} className={sty.cartContainer}>
 						<CartSVG className={sty.rightSideIcon} />
 
 						<div className={sty.cartCount}>
 							<p>{'35'}</p>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</div>
 		</div>

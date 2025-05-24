@@ -1,18 +1,23 @@
-import { CartItem } from '@/UI/Components/CartItem/CartItem'
-import { Header } from '@/UI/Components/Header/Header'
-import { TopSide } from '@/UI/Components/TopSide/TopSide'
-import sty from './page.module.scss'
-export default function Cart() {
+import { BrandLogo } from '@/UI/Components/BrandLogo/BrandLogo'
+import { SearchInput } from '@/UI/Components/SeatchInput/SearchInput'
+import { UserCartPanel } from '@/UI/Components/UserCartPanel/UserCartPanel'
+import { Cart } from '@/UI/Screens/Cart/Cart'
+export default function page() {
 	return (
-		<div>
-			<Header></Header>
-			<TopSide cart={false} search={false}></TopSide>
-			<div className={sty.cartBody}>
-				<div className={sty.cartItemsContainer}>
-					<CartItem></CartItem>
-				</div>
-				<div className={sty.cartTotalContainer}>999euro</div>
+		<>
+			<div
+				style={{
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'space-around',
+					padding: '1rem 0rem',
+				}}
+			>
+				<BrandLogo />
+				<SearchInput />
+				<UserCartPanel />
 			</div>
-		</div>
+			<Cart />
+		</>
 	)
 }

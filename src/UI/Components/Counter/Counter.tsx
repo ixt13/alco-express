@@ -1,6 +1,5 @@
 'use client'
 
-import { taptic } from '@/app/functions/taptic'
 import { useState } from 'react'
 import { CartSVG } from '../SvgComponents/CartSVG'
 import { MinusSvg } from '../SvgComponents/MinusSvg'
@@ -15,13 +14,11 @@ export const Counter = ({ className }: iCounter) => {
 	const [quantity, setQuantity] = useState<number>(0)
 
 	const handleIncrement = () => {
-		taptic()
 		setQuantity(prev => prev + 1)
 	}
 	const handleDecrement = () => {
 		setQuantity(prev => {
 			if (prev > 0) {
-				taptic()
 				return prev - 1
 			}
 			return prev
