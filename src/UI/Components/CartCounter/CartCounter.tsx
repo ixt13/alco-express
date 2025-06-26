@@ -10,7 +10,7 @@ interface iCounter {
 	className?: string
 }
 
-export const CartCounter = ({ className }: iCounter) => {
+export const CartCounter = () => {
 	const [quantity, setQuantity] = useState<number>(1)
 
 	const handleIncrement = () => {

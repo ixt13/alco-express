@@ -1,7 +1,6 @@
 import bottleImage from '@/assets/images/brockmans.png'
 import Image from 'next/image'
 import { CartCounter } from '../CartCounter/CartCounter'
-import { BinSVG } from '../SvgComponents/BinSVG'
 import sty from './CartItem.module.scss'
 export const CartItem = () => {
 	return (
@@ -19,10 +18,6 @@ export const CartItem = () => {
 						<span className={sty.euro}>€</span>
 						32.34
 					</p>
-					{/* <button className={sty.deleteButton}>
-						<BinSVG className={sty.binSvg} />
-						<p>Delete</p>
-					</button> */}
 				</div>
 				<div className={sty.bottomLine}>
 					<CartCounter />
