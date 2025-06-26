@@ -3,5 +3,5 @@ interface IConstants {
 }
 
 export const constants: IConstants = {
-	phoneNumber: '+49 1511164850',
+	phoneNumber: '+373 60 000 000',
 }

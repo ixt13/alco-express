@@ -5,13 +5,11 @@
 	padding: 8px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 	gap: 14px;
 }
 
 .imageContainer {
 	height: 100%;
-	flex: 1;
 }
 .bottleImage {
 	height: 100%;
@@ -19,40 +17,88 @@
 	object-fit: contain;
 }
 
-.itemTextContent {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: space-between;
-	flex: 2;
-}
-
 .itemText {
+	p {
+		font-size: clamp(1.2rem, 1.5rem, 1.5rem);
+	}
+}
+
+.price {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	gap: 4px;
+	font-size: 2rem;
+}
+
+.euro {
+	font-size: 3rem;
+}
+
+.priceContainer {
 	display: flex;
 	flex-direction: column;
-
+	align-items: start;
 	justify-content: center;
-	align-items: center;
-	gap: 2px;
+	gap: 4px;
 }
 
-.cartCounter {
-	width: 60%;
-	height: 20%;
-	object-fit: contain;
-}
-
-.cartCounterContainer {
+.topLine {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-	flex: 2;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: start;
 }
 
-.totalAndDelete {
+.bottomLine {
 	display: flex;
+
+	align-items: end;
+	justify-content: space-between;
+	@media (max-width: 480px) {
+		flex-direction: column;
+	}
+}
+
+.itemContainer {
+	display: flex;
+	flex: 1;
 	flex-direction: column;
 	justify-content: space-between;
-	flex: 1;
+	@media (max-width: 480px) {
+		align-items: center;
+	}
+}
+
+.binSvg {
+	width: 20px;
+	height: 20px;
+	opacity: none;
+	stroke-width: 1px;
+}
+
+.deleteButton {
+	color: white;
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	opacity: 0.6;
+	cursor: pointer;
+	@media (min-width: 1025px) {
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&:active {
+		opacity: 1;
+	}
+	p {
+		font-size: 1.2rem;
+		margin-left: 4px;
+	}
+
+	@media (max-width: 480px) {
+		display: none;
+	}
 }
