@@ -23,8 +23,8 @@ export const CheckoutContainer = () => {
 				<div className={sty.totalContainer}>
 					<div className={sty.total}>
 						<div className={sty.totalItem}>
-							<p>Total</p>
-							<p>
+							<p className={sty.totalText}>Total</p>
+							<p className={sty.totalPrice}>
 								<span className={sty.totalEuro}>€</span>
 								42.34
 							</p>

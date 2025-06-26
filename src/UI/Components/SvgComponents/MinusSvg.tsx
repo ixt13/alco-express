@@ -6,9 +6,9 @@ export const MinusSvg = ({ className }: iMinusSvg) => {
 	return (
 		<svg
 			className={className}
+			height={24}
+			width={24}
 			viewBox='0 0 24 24'
-			width='100%'
-			height='100%'
 			xmlns='http://www.w3.org/2000/svg'
 		>
 			<path d='M15 12.75C15.4142 12.75 15.75 12.4142 15.75 12C15.75 11.5858 15.4142 11.25 15 11.25H9C8.58579 11.25 8.25 11.5858 8.25 12C8.25 12.4142 8.58579 12.75 9 12.75H15Z' />

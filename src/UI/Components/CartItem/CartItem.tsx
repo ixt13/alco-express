@@ -15,26 +15,21 @@ export const CartItem = () => {
 						<p>Brockmans</p>
 						<p>Orange Kiss ,70 cl </p>
 					</div>
-
-					<button className={sty.deleteButton}>
+					<p className={sty.price}>
+						<span className={sty.euro}>€</span>
+						32.34
+					</p>
+					{/* <button className={sty.deleteButton}>
 						<BinSVG className={sty.binSvg} />
 						<p>Delete</p>
-					</button>
+					</button> */}
 				</div>
 				<div className={sty.bottomLine}>
-					<div className={sty.priceContainer}>
-						<p>price per bottle</p>
-						<p className={sty.price}>
-							<span className={sty.euro}>€</span>
-							32.34
-						</p>
-					</div>
-
 					<CartCounter />
 
 					<div className={sty.priceContainer}>
-						<p>total</p>
-						<p className={sty.price}>
+						<p className={sty.totalText}>Total</p>
+						<p className={sty.totalPrice}>
 							<span className={sty.euro}>€</span>
 							32.34
 						</p>

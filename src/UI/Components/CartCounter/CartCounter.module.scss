@@ -1,40 +1,18 @@
-.cartCounter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 6px;
-
-	position: relative;
-}
-
-.itemCounter {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-
-	border-radius: 6px;
-	position: relative;
-}
-
 .counter {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex: 0 0 50%;
-	height: 100%;
-	padding: 6px;
 
+	height: 100%;
 	button {
-		width: clamp(34px, 40px, 40px);
+		height: 100%;
+		position: relative;
 		background-color: transparent;
 		color: rgba(255, 255, 255, 0.6);
-		height: 100%;
-		display: flex;
+
 		align-items: center;
 		cursor: pointer;
-		display: flex;
+
 		&:active {
 			color: rgba(255, 255, 255, 1);
 		}
@@ -43,13 +21,11 @@
 
 .cartBox {
 	flex: 0 0 50%;
-	height: 100%;
+
 	border-left: 2px solid #fff;
 
 	border-radius: 0px 6px 6px 0px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
 	@media (min-width: 1025px) {
 		&:hover {
 			background-color: #77040499;
@@ -59,8 +35,7 @@
 
 .cartIcon {
 	display: flex;
-	width: 100%;
-	height: 100%;
+	min-height: 100%;
 	cursor: pointer;
 	fill: rgba(255, 255, 255, 0.6);
 	opacity: 100%;
@@ -77,12 +52,25 @@
 }
 
 .quantityBtn {
+	height: 100%;
+	width: 100%;
 	fill: currentColor;
-	min-width: 100%;
-	min-height: 100%;
+	padding: 14px;
 	aspect-ratio: 1/1;
-	padding: 4px;
+	@media (min-width: 1025px) {
+		&:hover {
+			transform: scale(1.1);
+			transition: all 0.1s ease;
+		}
+	}
+}
 
+.quantityBtnBin {
+	height: 100%;
+	width: 100%;
+	fill: currentColor;
+	padding: 16px;
+	aspect-ratio: 1/1;
 	@media (min-width: 1025px) {
 		&:hover {
 			transform: scale(1.1);
@@ -92,15 +80,14 @@
 }
 
 .quantityBox {
+	height: 100%;
 	border-radius: 50%;
 
-	aspect-ratio: 1/1;
-	min-height: 80%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 .quantityValue {
-	font-size: 18px;
+	font-size: clamp(1rem, 1.8rem, 1.8rem);
 }

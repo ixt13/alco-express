@@ -1,6 +1,7 @@
 .item {
 	background-color: rgba(119, 4, 4, 0.6);
 	border-radius: 8px;
+	height: 200px;
 	width: 100%;
 	padding: 8px;
 	display: flex;
@@ -13,13 +14,12 @@
 }
 .bottleImage {
 	height: 100%;
-
 	object-fit: contain;
 }
 
 .itemText {
 	p {
-		font-size: clamp(1.2rem, 1.5rem, 1.5rem);
+		font-size: clamp(1rem, 1.2rem, 1.2rem);
 	}
 }
 
@@ -28,11 +28,11 @@
 	flex-direction: row;
 	align-items: baseline;
 	gap: 4px;
-	font-size: 2rem;
+	font-size: clamp(1rem, 1.2rem, 1.2rem);
 }
 
 .euro {
-	font-size: 3rem;
+	font-size: clamp(1.2rem, 2rem, 2rem);
 }
 
 .priceContainer {
@@ -45,19 +45,16 @@
 
 .topLine {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: start;
 }
 
 .bottomLine {
 	display: flex;
-
+	height: 60px;
 	align-items: end;
 	justify-content: space-between;
-	@media (max-width: 480px) {
-		flex-direction: column;
-	}
 }
 
 .itemContainer {
@@ -65,9 +62,6 @@
 	flex: 1;
 	flex-direction: column;
 	justify-content: space-between;
-	@media (max-width: 480px) {
-		align-items: center;
-	}
 }
 
 .binSvg {
@@ -101,4 +95,16 @@
 	@media (max-width: 480px) {
 		display: none;
 	}
+}
+
+.totalPrice {
+	font-size: clamp(1.2rem, 1.4rem, 1.4rem);
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	gap: 4px;
+}
+
+.totalText {
+	font-size: clamp(1.2rem, 1.4rem, 1.4rem);
 }

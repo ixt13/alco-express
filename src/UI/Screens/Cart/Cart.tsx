@@ -6,6 +6,7 @@ export const Cart = () => {
 	return (
 		<>
 			<SeparatorLine />
+			<h3 className={sty.h3Title}>All Products</h3>
 			<div className={sty.cartWrapper}>
 				<div className={sty.itemsContainer}>
 					<CartItem /> <CartItem /> <CartItem /> <CartItem />
