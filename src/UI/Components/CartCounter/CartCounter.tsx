@@ -6,10 +6,6 @@ import { MinusSvg } from '../SvgComponents/MinusSvg'
 import { PlusSvg } from '../SvgComponents/PlusSvg'
 import sty from './CartCounter.module.scss'
 
-interface iCounter {
-	className?: string
-}
-
 export const CartCounter = () => {
 	const [quantity, setQuantity] = useState<number>(1)
 
