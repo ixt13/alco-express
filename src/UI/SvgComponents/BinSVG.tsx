@@ -1,7 +1,6 @@
-interface iBinSVG {
-	className?: string
-}
-export const BinSVG = ({ className }: iBinSVG) => {
+import { iSVG } from './type'
+
+export const BinSVG = ({ className }: iSVG) => {
 	return (
 		<svg
 			className={className}

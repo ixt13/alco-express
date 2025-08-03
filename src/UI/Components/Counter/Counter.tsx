@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { CartSVG } from '../SvgComponents/CartSVG'
-import { MinusSvg } from '../SvgComponents/MinusSvg'
-import { PlusSvg } from '../SvgComponents/PlusSvg'
+import { CartSVG } from '../../SvgComponents/CartSVG'
+import { MinusSvg } from '../../SvgComponents/MinusSvg'
+import { PlusSvg } from '../../SvgComponents/PlusSvg'
 import sty from './Counter.module.scss'
 
 interface iCounter {

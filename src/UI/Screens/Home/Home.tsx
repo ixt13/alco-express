@@ -1,4 +1,4 @@
-import { FilterSVG } from '@/UI/Components/SvgComponents/FilterSVG'
+import { FilterSVG } from '@/UI/SvgComponents/FilterSVG'
 import sty from './Home.module.scss'
 
 import { Item } from '@/UI/Components/Item/Item'

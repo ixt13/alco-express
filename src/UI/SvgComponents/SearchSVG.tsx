@@ -1,8 +1,6 @@
-interface iSvg {
-	className: string
-}
+import { iSVG } from './type'
 
-export const SearchSVG = ({ className }: iSvg) => {
+export const SearchSVG = ({ className }: iSVG) => {
 	return (
 		<svg
 			className={className}

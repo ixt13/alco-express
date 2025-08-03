@@ -1,8 +1,6 @@
-interface iFilterSVG {
-	className: string
-}
+import { iSVG } from './type'
 
-export const FilterSVG = ({ className }: iFilterSVG) => {
+export const FilterSVG = ({ className }: iSVG) => {
 	return (
 		<svg
 			className={className}

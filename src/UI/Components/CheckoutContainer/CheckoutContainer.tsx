@@ -5,7 +5,7 @@ export const CheckoutContainer = () => {
 	return (
 		<div className={sty.checkoutWrapper}>
 			<div className={sty.checkoutContainer}>
-				<h3>Order</h3>
+				<h3>Summary</h3>
 				<div className={sty.checkoutItem}>
 					<p>Subtotal</p>
 					<p className={sty.price}>

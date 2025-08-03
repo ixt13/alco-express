@@ -1,310 +1,138 @@
-.topContainer {
-	width: 100%;
-	background-color: #770404;
+.header {
+	background-color: var(--mainGreenColor);
+	height: 2.5rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: 12px;
-	padding: 6px;
-	a {
-		all: unset;
-	}
-
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		justify-content: center;
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		justify-content: center;
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-
-	@media (min-width: 769px) and (max-width: 1024px) {
-		justify-content: center;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		justify-content: flex-end;
-		padding: 6px 28px 6px 6px;
-		gap: 48px;
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		justify-content: flex-end;
-		padding: 6px 28px 6px 6px;
-		gap: 48px;
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		justify-content: flex-end;
-		padding: 6px 28px 6px 6px;
-		gap: 48px;
-	}
-}
-.headerPhoneIcon {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		width: 20px;
-		height: 18px;
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		width: 20px;
-		height: 18px;
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		width: 22px;
-		height: 20px;
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		width: 24px;
-		height: 22px;
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		width: 26px;
-		height: 24px;
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		width: 28px;
-		height: 26px;
-	}
+	justify-content: space-between;
+	padding: 0px 1.6rem 0px 1.6rem;
 }
 
-.languageSelect {
+.navTab {
 	display: flex;
 	flex-direction: row;
-	gap: 2px;
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		gap: 8px;
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		gap: 8px;
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		gap: 8px;
-	}
-
-	button {
-		transition: all 0.2s ease;
-		padding: 4px;
-		background-color: transparent;
-		border: none;
-		color: currentColor;
-		cursor: pointer;
-		border-radius: 4px;
-		font-size: 18px;
-		// Мобильные устройства (телефоны, до 480px)
-		@media (max-width: 480px) {
-			&:active {
-				background-color: #f5f5f5a8;
-			}
-		}
-
-		// Маленькие планшеты (от 481px до 768px)
-		@media (min-width: 481px) and (max-width: 768px) {
-			&:active {
-				background-color: #f5f5f5a8;
-			}
-		}
-
-		// Большие планшеты (от 769px до 1024px)
-		@media (min-width: 769px) and (max-width: 1024px) {
-			&:active {
-				background-color: #f5f5f5a8;
-			}
-		}
-
-		// Маленькие ноутбуки (от 1025px до 1280px)
-		@media (min-width: 1025px) and (max-width: 1280px) {
-			&:hover {
-				background-color: #f5f5f5a8;
-			}
-		}
-
-		// Ноутбуки и десктопы (от 1281px до 1440px)
-		@media (min-width: 1281px) and (max-width: 1440px) {
-			&:hover {
-				background-color: #f5f5f5a8;
-			}
-		}
-
-		// Большие экраны (от 1441px и выше)
-		@media (min-width: 1441px) {
-			&:hover {
-				background-color: #f5f5f5a8;
-			}
-		}
-	}
-}
-.phoneNumberBlock {
-	display: flex;
-	gap: 6px;
-	transition: all 0.2s ease;
+	align-items: center;
+	color: currentColor;
+	gap: 16px;
 	a {
-		cursor: pointer;
-
+		font-size: var(--fontSizeStandart);
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		white-space: nowrap;
 		&:hover {
 			text-decoration: underline;
 		}
 	}
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-	}
 }
 
-.burger {
+.icon {
+	color: var(--mainTextColor);
+	width: var(--iconSizeStandart);
+	height: var(--iconSizeStandart);
+}
+
+.phoneSection {
 	display: flex;
-	flex-direction: column;
-	gap: 6px;
+	flex-direction: row;
+	align-items: center;
+	font-size: var(--fontSizeStandart_sm);
+	font-weight: 500;
+	gap: 10px;
 	cursor: pointer;
-	opacity: 60%;
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		min-width: 22px;
-		max-width: 22px;
-		&:active {
-			opacity: 100%;
-		}
-	}
-
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		min-width: 22px;
-		max-width: 22px;
-		&:active {
-			opacity: 100%;
-		}
-	}
-
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		min-width: 22px;
-		max-width: 22px;
-		&:active {
-			opacity: 100%;
-		}
-	}
-
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		min-width: 22px;
-		max-width: 22px;
-		&:hover {
-			opacity: 100%;
-		}
-		&:active {
-			fill: #c7c7c7;
-		}
-	}
-
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		min-width: 22px;
-		max-width: 22px;
-		&:hover {
-			opacity: 100%;
-		}
-		&:active {
-			fill: #c7c7c7;
-		}
-	}
-
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		min-width: 22px;
-		max-width: 22px;
-		&:hover {
-			opacity: 100%;
-		}
-		&:active {
-			fill: #c7c7c7;
-		}
-	}
-}
-.line {
-	border-bottom: 2px solid #f5f5f5;
 }
 
-.slogan {
-	// Мобильные устройства (телефоны, до 480px)
-	@media (max-width: 480px) {
-		font-size: 4px;
-	}
+.socialsSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
 
-	// Маленькие планшеты (от 481px до 768px)
-	@media (min-width: 481px) and (max-width: 768px) {
-		font-size: 6px;
-	}
+.languagesSection {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
 
-	// Большие планшеты (от 769px до 1024px)
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 7px;
-	}
+.rigthSide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
 
-	// Маленькие ноутбуки (от 1025px до 1280px)
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		font-size: 9px;
-	}
+.secondPart {
+	display: flex;
+	flex-direction: row;
+	padding: 1.2rem 2rem 1.2rem 2rem;
+	justify-content: space-between;
+	gap: 30px;
+}
 
-	// Ноутбуки и десктопы (от 1281px до 1440px)
-	@media (min-width: 1281px) and (max-width: 1440px) {
-		font-size: 13px;
-	}
+.logoSection {
+	display: flex;
+	flex-direction: row;
+	color: black;
+	align-items: center;
+	gap: 10px;
 
-	// Большие экраны (от 1441px и выше)
-	@media (min-width: 1441px) {
-		font-size: 17px;
+	p {
+		font-size: var(--fontSizeStandart_mid);
 	}
+}
+.logo {
+}
+.searchSection {
+	flex: 1 1 auto;
+}
+.searchInput {
+	width: 100%;
+	height: 100%;
+	border: 1px solid;
+	border-color: var(--borderColorMain);
+	background-color: var(--secondWhiteColor);
+	border-radius: 4px;
+	font-size: var(--fontSizeStandart_sm);
+	padding: 8px;
+	color: var(--secondTextColor);
+	cursor: text;
+}
+
+.userSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	span {
+		color: var(--secondTextColor);
+		font-size: var(--fontSizeStandart);
+	}
+}
+.secondIcon {
+	color: var(--secondTextColor);
+	width: var(--iconSizeStandart_mid);
+	height: var(--iconSizeStandart_mid);
+}
+
+.logSection {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+.userSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+.logSectionCounter {
+	background-color: var(--mainGreenColor);
+	height: var(--iconSizeStandart_sm);
+	width: var(--iconSizeStandart_sm);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

@@ -1,18 +1,18 @@
 import { Header } from '@/UI/Components/Header/Header'
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './global.css'
-
-const geistSans = Geist({
-	variable: '--font-geist-sans',
+const geistSans = Montserrat({
 	subsets: ['latin'],
+	weight: ['500'],
+	display: 'swap',
 })
-
+// Faculty Glyphic
 export const metadata: Metadata = {
 	title: 'AlcoExpress',
-	description: 'Wir bringen den Genuss zu Ihnen nach Hause!',
+
 	icons: {
-		icon: '/favico.svg',
+		icon: '/favicon.svg',
 	},
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${geistSans.variable} `}>
+			<body className={`${geistSans.className}`}>
 				<Header />
 				{children}
 			</body>

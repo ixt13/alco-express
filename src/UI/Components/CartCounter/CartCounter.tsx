@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { BinSVG } from '../SvgComponents/BinSVG'
-import { MinusSvg } from '../SvgComponents/MinusSvg'
-import { PlusSvg } from '../SvgComponents/PlusSvg'
+import { BinSVG } from '../../SvgComponents/BinSVG'
+import { MinusSvg } from '../../SvgComponents/MinusSvg'
+import { PlusSvg } from '../../SvgComponents/PlusSvg'
 import sty from './CartCounter.module.scss'
 
 export const CartCounter = () => {

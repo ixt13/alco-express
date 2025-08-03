@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { CartSVG } from '../SvgComponents/CartSVG'
-import { UserSVG } from '../SvgComponents/UserSVG'
+import { CartSVG } from '../../SvgComponents/CartSVG'
+import { UserSVG } from '../../SvgComponents/UserSVG'
 import sty from './UserCartPanel.module.scss'
 
 export const UserCartPanel = () => {

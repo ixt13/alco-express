@@ -1,7 +1,7 @@
 import brandLogoIcon from '@/assets/images/brandLogoIcon.png'
 import Image from 'next/image'
-import { CartSVG } from '../SvgComponents/CartSVG'
-import { SearchSVG } from '../SvgComponents/SearchSVG'
+import { CartSVG } from '../../SvgComponents/CartSVG'
+import { SearchSVG } from '../../SvgComponents/SearchSVG'
 import sty from './TopSide.module.scss'
 
 interface iTopSide {

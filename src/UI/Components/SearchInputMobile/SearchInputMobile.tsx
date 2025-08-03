@@ -1,4 +1,4 @@
-import { SearchSVG } from '../SvgComponents/SearchSVG'
+import { SearchSVG } from '../../SvgComponents/SearchSVG'
 import sty from './SearchInputMobile.module.scss'
 
 export const SearchInputMobile = () => {
