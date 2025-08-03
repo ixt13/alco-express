@@ -18,3 +18,26 @@ export const headerInputPlaceHolder = {
 	ru: '',
 	ro: 'Căutare în catalog',
 }
+
+interface iProduct {
+	name: string
+	image?: SVGElement
+}
+
+const menuItems = [
+	'Vinul',
+	'Certificate Cadou',
+	'CHAMPAGNE',
+	'Bere',
+	'Vodka',
+	'Coniac',
+	'Brandy',
+	'Rom',
+	'Whisky',
+	'Gin',
+	'Tequila',
+	'Sucuri ',
+]
+export const productNavCategories: iProduct[] = menuItems.map(name => ({
+	name,
+}))

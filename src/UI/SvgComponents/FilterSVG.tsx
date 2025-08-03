@@ -4,53 +4,15 @@ export const FilterSVG = ({ className }: iSVG) => {
 	return (
 		<svg
 			className={className}
-			width='40'
-			height='35'
-			viewBox='0 0 40 35'
+			width='10'
+			height='10'
+			viewBox='0 0 800 800'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 		>
 			<path
-				d='M1 27.6H10.5'
-				stroke='currentColor'
-				strokeWidth='2'
-				strokeMiterlimit='10'
-				strokeLinecap='round'
-				strokeLinejoin='round'
-			/>
-			<path
-				d='M39 6.69995H29.5'
-				stroke='currentColor'
-				strokeWidth='2'
-				strokeMiterlimit='10'
-				strokeLinecap='round'
-				strokeLinejoin='round'
-			/>
-			<path
-				d='M21.9 27.6H39'
-				stroke='currentColor'
-				strokeWidth='2'
-				strokeMiterlimit='10'
-				strokeLinecap='round'
-				strokeLinejoin='round'
-			/>
-			<path
-				d='M18.1 6.69995H1'
-				stroke='currentColor'
-				strokeWidth='2'
-				strokeMiterlimit='10'
-				strokeLinecap='round'
-				strokeLinejoin='round'
-			/>
-			<path
-				d='M10.5 23.8C10.5 22.7507 11.3507 21.9 12.4 21.9H20C21.0494 21.9 21.9 22.7507 21.9 23.8V31.4C21.9 32.4494 21.0494 33.3 20 33.3H12.4C11.3507 33.3 10.5 32.4494 10.5 31.4V23.8Z'
-				stroke='currentColor'
-				strokeWidth='2'
-			/>
-			<path
-				d='M29.5 2.9C29.5 1.85067 28.6494 1 27.6 1H20C18.9506 1 18.1 1.85067 18.1 2.9V10.5C18.1 11.5493 18.9506 12.4 20 12.4H27.6C28.6494 12.4 29.5 11.5493 29.5 10.5V2.9Z'
-				stroke='currentColor'
-				strokeWidth='2'
+				d='M792 0C796.418 0 800 3.58172 800 8V792C800 796.418 796.418 800 792 800H8C3.58172 800 0 796.418 0 792V8C0 3.58172 3.58172 0 8 0H792ZM433.097 177C425.477 177 418.703 181.302 414.47 187.756L301.017 372.759C295.937 381.794 297.207 392.981 303.98 400.295L314.14 411.48C323.03 422.667 331.92 442.889 331.92 458.808V577.983C331.92 614.124 371.713 634.345 400.5 616.275L431.826 596.054C442.833 589.17 451.724 571.1 451.724 557.763V460.958C451.724 442.888 460.613 420.516 473.736 409.33L568.986 323.712C579.993 312.526 591 290.153 591 272.083V222.175C591 197.221 571.103 177 546.55 177H433.097ZM254.45 177.431C229.897 177.431 210 197.652 210 224.757V276.386C210 290.153 218.89 310.374 229.896 321.561L250.64 343.503C260.376 354.259 277.734 352.538 285.354 340.061L363.67 211.85C372.983 196.791 362.4 177.431 345.043 177.431H254.45Z'
+				fill='currentColor'
 			/>
 		</svg>
 	)

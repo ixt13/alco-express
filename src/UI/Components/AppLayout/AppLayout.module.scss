@@ -1,0 +1,149 @@
+.wrapper {
+	flex: 1;
+	display: flex;
+	gap: 34px;
+	margin: 24px 24px 0px 0px;
+}
+.mainNavSection {
+	transition: all 0.2s ease;
+	width: 20vw;
+	height: 80vh;
+	position: sticky;
+	top: 0px;
+
+	background-color: var(--backgroundDarkColor);
+	border-radius: 0px 8px 8px 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.navTopGroup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+
+.logoSection {
+	margin-top: 14px;
+	display: flex;
+	flex-direction: row;
+	color: var(--logoColor);
+	align-items: center;
+	gap: 10px;
+	justify-content: center;
+
+	p {
+		font-size: var(--fontSizeStandart_mid);
+	}
+}
+
+.logo {
+	width: 108px;
+	height: 30px;
+}
+
+.secondNavSection {
+	flex: 1;
+}
+
+.menuButtonsGroup {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 24px;
+}
+.navBotSection {
+	flex: 1;
+	padding: 14px;
+}
+.navBotSection {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	font-size: var(--fontSizeStandart_sm);
+	color: var(--secondTextColor);
+}
+.menuButton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+
+	span {
+		color: var(--secondTextColor);
+	}
+}
+
+.menuIcon {
+	width: var(--iconSizeStandart_sm);
+	height: var(--iconSizeStandart_sm);
+	color: var(--mainGreenColor);
+}
+
+.navBar {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--backgroundDarkColor);
+	padding: 14px;
+
+	border-radius: 8px;
+	gap: 14px;
+}
+.searchSection {
+	flex: 1;
+}
+
+.searchInput {
+	width: 100%;
+	height: 100%;
+	border: 1px solid;
+	border-color: var(--borderColorMain);
+	background-color: var(--secondWhiteColor);
+	border-radius: 4px;
+	font-size: var(--fontSizeStandart_sm);
+	padding: 8px;
+	color: var(--secondTextColor);
+	cursor: text;
+}
+
+.userSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	span {
+		color: var(--secondTextColor);
+		font-size: var(--fontSizeStandart);
+	}
+}
+.secondIcon {
+	color: var(--secondTextColor);
+	width: var(--iconSizeStandart_mid);
+	height: var(--iconSizeStandart_mid);
+}
+
+.logSection {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+.userSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+.logSectionCounter {
+	background-color: var(--mainGreenColor);
+	height: var(--iconSizeStandart_sm);
+	width: var(--iconSizeStandart_sm);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.childrenContainer {
+	background-color: red;
+}

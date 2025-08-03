@@ -1,0 +1,99 @@
+'use client'
+
+import { productNavCategories } from '@/config'
+import { CartSVG } from '@/UI/SvgComponents/CartSVG'
+import { FilterSVG } from '@/UI/SvgComponents/FilterSVG'
+import { HearthSVG } from '@/UI/SvgComponents/HearthSVG'
+import { Logo } from '@/UI/SvgComponents/LogoSVG'
+import { MenuSVG } from '@/UI/SvgComponents/MenuSVG'
+import { UserSVG } from '@/UI/SvgComponents/UserSVG'
+import { ReactNode, useEffect, useRef, useState } from 'react'
+import styles from './AppLayout.module.scss'
+
+interface iAppLayout {
+	children?: ReactNode
+}
+
+export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
+	const stickyRef = useRef<HTMLDivElement>(null)
+	const [isSticky, setIsSticky] = useState(false)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (!stickyRef.current) return
+
+			const top = stickyRef.current.getBoundingClientRect().top
+			setIsSticky(top <= 0)
+		}
+		handleScroll()
+		window.addEventListener('scroll', handleScroll)
+
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
+
+	return (
+		<div className={styles.wrapper}>
+			<div
+				ref={stickyRef}
+				className={styles.mainNavSection}
+				style={{
+					...(isSticky ? { height: '100vh', borderRadius: '0px' } : {}),
+				}}
+			>
+				<div className={styles.navTopGroup}>
+					<div className={styles.logoSection}>
+						<Logo className={styles.logo} />
+						<p>express</p>
+					</div>
+					<div className={styles.menuButtonsGroup}>
+						<div className={styles.menuButton}>
+							<MenuSVG className={styles.menuIcon} />
+							<span>Catalog</span>
+						</div>
+						<div className={styles.menuButton}>
+							<FilterSVG className={styles.menuIcon} />
+							<span>Filtre</span>
+						</div>
+					</div>
+				</div>
+				<div className={styles.navBotSection}>
+					{productNavCategories.map((el, index) => (
+						<div key={index}>
+							<span>{el.name}</span>
+						</div>
+					))}
+				</div>
+			</div>
+			<div className={styles.secondNavSection}>
+				<div className={styles.navBar}>
+					<div className={styles.searchSection}>
+						<input
+							className={styles.searchInput}
+							type='text'
+							placeholder={'Cauta in catalog'}
+						/>
+					</div>
+					<div className={styles.logSection}>
+						<div className={styles.userSection}>
+							<UserSVG className={styles.secondIcon} />
+							<span>{`AUTENTIFICARE`}</span>
+						</div>
+						<div className={styles.userSection}>
+							<HearthSVG className={styles.secondIcon} />
+							<div className={styles.logSectionCounter}>
+								<span>0</span>
+							</div>
+						</div>
+						<div className={styles.userSection}>
+							<CartSVG className={styles.secondIcon}></CartSVG>
+							<div className={styles.logSectionCounter}>
+								<span>0</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className={styles.childrenContainer}>{children}</div>
+			</div>
+		</div>
+	)
+}

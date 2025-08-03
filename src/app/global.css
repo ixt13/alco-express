@@ -12,6 +12,7 @@
 	--mainGreenColor: #41b757;
 	--mainBodyColor: #eeeeee;
 	--secondWhiteColor: #e3e3e3;
+	--backgroundDarkColor: #cbcbcb;
 	--borderColorMain: #d9d9d9;
 	--fontSizeStandart: 14px;
 	--fontSizeStandart_sm: 16px;
@@ -19,6 +20,7 @@
 	--iconSizeStandart: 24px;
 	--iconSizeStandart_sm: 28px;
 	--iconSizeStandart_mid: 34px;
+	--logoColor: black;
 }
 
 body {
@@ -52,7 +54,7 @@ a,
 a:visited,
 a:hover,
 a:active {
-	color: var(--mainTextColor); /* или любой твой цвет */
+	color: var(--mainTextColor);
 	text-decoration: none;
 }
 

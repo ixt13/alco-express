@@ -1,3 +1,4 @@
+import { AppLayout } from '@/UI/Components/AppLayout/AppLayout'
 import { Header } from '@/UI/Components/Header/Header'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
@@ -23,9 +24,16 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${geistSans.className}`}>
+			<body
+				className={`${geistSans.className}`}
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					position: 'relative',
+				}}
+			>
 				<Header />
-				{children}
+				<AppLayout> {children}</AppLayout>
 			</body>
 		</html>
 	)
