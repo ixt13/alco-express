@@ -2,7 +2,13 @@ import { iSVG } from './type'
 
 export const Logo = ({ className }: iSVG) => {
 	return (
-		<svg width='108' height='30' viewBox='0 0 403 108' fill='none'>
+		<svg
+			className={className}
+			width='108'
+			height='30'
+			viewBox='0 0 403 108'
+			fill='none'
+		>
 			<path
 				d='M47.1331 15.3333L38.7998 30.6L52.2665 64.2667C62.7998 90.7333 65.5998 99 65.1998 102.933L64.7331 108H85.1331H105.533L101.066 103.533C95.3331 97.8 73.7331 48.2667 60.6665 11C55.9331 -2.53334 57.0665 -2.86667 47.1331 15.3333Z'
 				fill='currentColor'
