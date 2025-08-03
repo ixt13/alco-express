@@ -1,8 +1,8 @@
 .wrapper {
 	flex: 1;
 	display: flex;
-	gap: 34px;
-	margin: 24px 24px 0px 0px;
+	gap: 14px;
+	margin: 14px 14px 0px 0px;
 }
 .mainNavSection {
 	transition: all 0.2s ease;
@@ -123,9 +123,20 @@
 	flex-direction: row;
 	align-items: center;
 	gap: 10px;
+	border-radius: 8px;
+
+	cursor: pointer;
+	padding: 4px;
 	span {
 		color: var(--secondTextColor);
 		font-size: var(--fontSizeStandart);
+	}
+	&:hover {
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+			rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	}
+	&:active {
+		opacity: 0.7;
 	}
 }
 .secondIcon {
