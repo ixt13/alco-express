@@ -1,0 +1,47 @@
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.categoriesButton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	padding: 12px;
+	border-radius: 8px;
+	transition: background-color 0.2s ease;
+	p {
+		font-size: var(--fontSizeStandart_mid);
+	}
+
+	&:hover {
+		background-color: var(--mainGreenColor);
+	}
+	&:active {
+		opacity: 0.7;
+	}
+}
+.categoriesButtonIcon {
+	transition: all 0.2s ease;
+	width: var(--iconSizeStandart);
+	height: var(--iconSizeStandart);
+}
+
+.fadeOut {
+	-webkit-animation: fadeOut 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+	animation: fadeOut 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}

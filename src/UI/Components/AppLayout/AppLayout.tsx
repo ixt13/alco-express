@@ -1,6 +1,6 @@
 'use client'
 
-import { productNavCategories } from '@/config'
+import { menuItems } from '@/config'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { FilterSVG } from '@/UI/SvgComponents/FilterSVG'
 import { HearthSVG } from '@/UI/SvgComponents/HearthSVG'
@@ -8,6 +8,7 @@ import { Logo } from '@/UI/SvgComponents/LogoSVG'
 import { MenuSVG } from '@/UI/SvgComponents/MenuSVG'
 import { UserSVG } from '@/UI/SvgComponents/UserSVG'
 import { ReactNode, useEffect, useRef, useState } from 'react'
+import { CategoriesButton } from '../CategoriesButton/CategoriesButton'
 import styles from './AppLayout.module.scss'
 
 interface iAppLayout {
@@ -17,7 +18,7 @@ interface iAppLayout {
 export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const stickyRef = useRef<HTMLDivElement>(null)
 	const [isSticky, setIsSticky] = useState(false)
-
+	const [mouseDown, setMouseDown] = useState(false)
 	useEffect(() => {
 		const handleScroll = () => {
 			if (!stickyRef.current) return
@@ -46,7 +47,7 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 						<p>express</p>
 					</div>
 					<div className={styles.menuButtonsGroup}>
-						<div className={styles.menuButton}>
+						<div onMouseDown={() => {}} className={styles.menuButton}>
 							<MenuSVG className={styles.menuIcon} />
 							<span>Catalog</span>
 						</div>
@@ -57,10 +58,8 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 					</div>
 				</div>
 				<div className={styles.navBotSection}>
-					{productNavCategories.map((el, index) => (
-						<div key={index}>
-							<span>{el.name}</span>
-						</div>
+					{menuItems.map((el, index) => (
+						<CategoriesButton el={el} key={index} />
 					))}
 				</div>
 			</div>

@@ -7,7 +7,7 @@
 .mainNavSection {
 	transition: all 0.2s ease;
 	width: 20vw;
-	height: 80vh;
+	height: 84vh;
 	position: sticky;
 	top: 0px;
 
@@ -39,8 +39,8 @@
 }
 
 .logo {
-	width: 108px;
-	height: 30px;
+	width: 140px;
+	height: 40px;
 }
 
 .secondNavSection {
@@ -53,31 +53,42 @@
 	justify-content: space-around;
 	gap: 24px;
 }
+
 .navBotSection {
 	flex: 1;
-	padding: 14px;
-}
-.navBotSection {
 	display: flex;
 	flex-direction: column;
-	gap: 14px;
+	gap: 4px;
+	padding: 24px;
 	font-size: var(--fontSizeStandart_sm);
 	color: var(--secondTextColor);
+	justify-content: center;
 }
 .menuButton {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 10px;
-
+	padding: 6px;
+	cursor: pointer;
+	transition: all 0.1s ease;
+	border-radius: 8px;
 	span {
 		color: var(--secondTextColor);
+	}
+
+	&:hover {
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+			rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	}
+	&:active {
+		opacity: 0.7;
 	}
 }
 
 .menuIcon {
-	width: var(--iconSizeStandart_sm);
-	height: var(--iconSizeStandart_sm);
+	width: var(--iconSizeStandart);
+	height: var(--iconSizeStandart);
 	color: var(--mainGreenColor);
 }
 
