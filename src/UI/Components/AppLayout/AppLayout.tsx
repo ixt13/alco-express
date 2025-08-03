@@ -18,7 +18,7 @@ interface iAppLayout {
 export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const stickyRef = useRef<HTMLDivElement>(null)
 	const [isSticky, setIsSticky] = useState(false)
-	const [mouseDown, setMouseDown] = useState(false)
+
 	useEffect(() => {
 		const handleScroll = () => {
 			if (!stickyRef.current) return
