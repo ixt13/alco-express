@@ -7,6 +7,8 @@ import { HearthSVG } from '@/UI/SvgComponents/HearthSVG'
 import { Logo } from '@/UI/SvgComponents/LogoSVG'
 import { MenuSVG } from '@/UI/SvgComponents/MenuSVG'
 import { UserSVG } from '@/UI/SvgComponents/UserSVG'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import { CategoriesButton } from '../CategoriesButton/CategoriesButton'
 import styles from './AppLayout.module.scss'
@@ -18,6 +20,7 @@ interface iAppLayout {
 export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const stickyRef = useRef<HTMLDivElement>(null)
 	const [isSticky, setIsSticky] = useState(false)
+	const pathName = usePathname()
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -91,6 +94,18 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 						</div>
 					</div>
 				</div>
+
+				{pathName !== '/' ? (
+					<div className={styles.breadcrumbs}>
+						<Link href={'#'}>Pagina principală</Link>
+						<p>current page</p>
+					</div>
+				) : (
+					<p className={styles.siteInfo}>
+						AlcoExpress ®️ Magazin online de Bauturi Alcoolice în Moldova
+					</p>
+				)}
+
 				<div className={styles.childrenContainer}>{children}</div>
 			</div>
 		</div>

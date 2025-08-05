@@ -9,6 +9,7 @@
 :root {
 	--mainTextColor: #eeeeee;
 	--secondTextColor: #565758;
+	--thirdTextColor: #4e4e4e;
 	--mainGreenColor: #41b757;
 	--mainBodyColor: #eeeeee;
 	--secondWhiteColor: #e3e3e3;
@@ -54,7 +55,7 @@ a,
 a:visited,
 a:hover,
 a:active {
-	color: var(--mainTextColor);
+	color: currentColor;
 	text-decoration: none;
 }
 

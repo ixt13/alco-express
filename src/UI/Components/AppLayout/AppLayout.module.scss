@@ -1,7 +1,7 @@
 .wrapper {
 	flex: 1;
 	display: flex;
-	gap: 14px;
+	gap: 24px;
 	margin: 14px 14px 0px 0px;
 }
 .mainNavSection {
@@ -168,4 +168,35 @@
 
 .childrenContainer {
 	background-color: red;
+}
+
+.breadcrumbs {
+	font-size: var(--fontSizeStandart_sm);
+	color: var(--secondTextColor);
+	display: flex;
+	gap: 4px;
+	margin-top: 14px;
+
+	a {
+		opacity: 0.8;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	p {
+		opacity: 0.7;
+	}
+}
+
+.breadcrumbs > :not(:last-child)::after {
+	content: '|';
+	margin: 0 4px;
+	color: var(--secondTextColor);
+}
+
+.siteInfo {
+	color: var(--secondTextColor);
+	font-size: var(--fontSizeStandart_mid);
+	margin-top: 14px;
+	font-weight: 500;
 }
