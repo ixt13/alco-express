@@ -81,7 +81,7 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 							<span>{`AUTENTIFICARE`}</span>
 						</div>
 						<div className={styles.userSection}>
-							<HearthSVG className={styles.secondIcon} />
+							<HearthSVG className={styles.hearthIcon} />
 							<div className={styles.logSectionCounter}>
 								<span>0</span>
 							</div>

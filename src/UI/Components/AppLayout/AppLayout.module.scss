@@ -2,7 +2,7 @@
 	flex: 1;
 	display: flex;
 	gap: 24px;
-	margin: 14px 14px 0px 0px;
+	margin: 14px 24px 0px 0px;
 }
 .mainNavSection {
 	transition: all 0.2s ease;
@@ -144,6 +144,11 @@
 	width: var(--iconSizeStandart_mid);
 	height: var(--iconSizeStandart_mid);
 }
+.hearthIcon {
+	fill: var(--secondTextColor);
+	width: var(--iconSizeStandart_mid);
+	height: var(--iconSizeStandart_mid);
+}
 
 .logSection {
 	display: flex;
@@ -164,10 +169,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.childrenContainer {
-	background-color: red;
 }
 
 .breadcrumbs {
@@ -199,4 +200,7 @@
 	font-size: var(--fontSizeStandart_mid);
 	margin-top: 14px;
 	font-weight: 500;
+}
+.childrenContainer {
+	margin: 12px;
 }

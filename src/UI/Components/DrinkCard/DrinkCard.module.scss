@@ -1,0 +1,48 @@
+.drinkCard {
+	height: 320px;
+	width: 100%;
+	border-radius: 8px;
+	background-color: var(--mainGreenColor07);
+}
+
+.cardImageSection {
+	position: relative;
+	height: 60%;
+	border-radius: 8px;
+	background-color: var(--backgroundDarkColor);
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+		rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	display: flex;
+}
+.cardDescriptionSection {
+	height: 40%;
+}
+
+.image {
+	height: 100%;
+	aspect-ratio: 3 / 4; /* или 1/1 для квадратов, 16/9, и т.д. */
+	object-fit: contain; /* если это <img> */
+	padding: 8px;
+}
+
+.cardImageSectionHeart {
+	position: absolute;
+	stroke-width: 24;
+	z-index: 2;
+	right: 0px;
+	top: 0px;
+	margin: 14px;
+	height: var(--iconSizeStandart_mid);
+	width: var(--iconSizeStandart_mid);
+
+	cursor: pointer;
+	transition: all 0.2s ease;
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&:active {
+		transition: none;
+		opacity: 0.7;
+	}
+}
