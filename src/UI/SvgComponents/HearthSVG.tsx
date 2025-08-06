@@ -14,7 +14,8 @@ export const HearthSVG = ({ className, setIsLiked }: iHearthSVG) => {
 			viewBox='0 0 800 800'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
-			onClick={() => {
+			onClick={e => {
+				e.stopPropagation()
 				if (setIsLiked) {
 					setIsLiked(prevState => !prevState)
 				}
