@@ -13,15 +13,9 @@ export default function Page() {
 	const [isActiveHearth, setIsActiveHearth] = useState<boolean>(false)
 	const [isActiveCart, setIsActiveCart] = useState<boolean>(false)
 
-	const handleHearthClick = (
-		e: React.MouseEvent<HTMLDivElement, MouseEvent>
-	) => {
-		setIsActiveHearth(prevState => !prevState)
-	}
+	const handleHearthClick = () => setIsActiveHearth(prevState => !prevState)
 
-	const handleCartClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-		setIsActiveCart(prevState => !prevState)
-	}
+	const handleCartClick = () => setIsActiveCart(prevState => !prevState)
 
 	return (
 		<div className={styles.wrapper}>

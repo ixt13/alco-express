@@ -30,3 +30,4 @@ export const HearthSVG = forwardRef<SVGSVGElement, iHearthSVG>(
 		)
 	}
 )
+HearthSVG.displayName = 'HearthSVG'
