@@ -8,7 +8,7 @@ import Image from 'next/image'
 import { useRef, useState } from 'react'
 import styles from './drinkinfo.module.scss'
 
-export default function Page() {
+export default function page() {
 	const likeRef = useRef<SVGSVGElement>(null)
 	const [isActiveHearth, setIsActiveHearth] = useState<boolean>(false)
 	const [isActiveCart, setIsActiveCart] = useState<boolean>(false)
