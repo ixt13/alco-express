@@ -56,9 +56,6 @@ export default function Page() {
 						<p>Adaugă la favorite</p>
 					</div>
 					<div
-						onClick={() => {
-							return
-						}}
 						className={`${styles.likeGroup} ${
 							isActiveCart && styles.drinkCardActive
 						} ${!isActiveCart && styles.drinkCardHover}`}
