@@ -3,7 +3,7 @@
 import { menuItems } from '@/config'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { FilterSVG } from '@/UI/SvgComponents/FilterSVG'
-import { HearthSVG } from '@/UI/SvgComponents/HearthSVG'
+import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
 import { Logo } from '@/UI/SvgComponents/LogoSVG'
 import { MenuSVG } from '@/UI/SvgComponents/MenuSVG'
 import { UserSVG } from '@/UI/SvgComponents/UserSVG'
@@ -21,6 +21,7 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const stickyRef = useRef<HTMLDivElement>(null)
 	const [isSticky, setIsSticky] = useState(false)
 	const pathName = usePathname()
+	const cleanPathName = pathName.split('/').join('')
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -98,7 +99,7 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 				{pathName !== '/' ? (
 					<div className={styles.breadcrumbs}>
 						<Link href={'#'}>Pagina principală</Link>
-						<p>current page</p>
+						<p>{cleanPathName}</p>
 					</div>
 				) : (
 					<p className={styles.siteInfo}>

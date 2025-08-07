@@ -2,10 +2,10 @@
 
 import image from '@/assets/images/drinks/whisky/cuttySark.png'
 
-import { CardCartSVG } from '@/UI/SvgComponents/CardCartSVG'
+import { CartSVG } from '@/UI/SvgComponents/CartSVG'
+import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
 import Image from 'next/image'
 import { useState } from 'react'
-import { LikeComponent } from '../LikeComponent/LikeComponent'
 import styles from './DrinkCard.module.scss'
 
 export const DrinkCard = () => {
@@ -38,15 +38,17 @@ export const DrinkCard = () => {
 			}}
 		>
 			<div className={styles.cardImageSection}>
-				<LikeComponent
+				<HearthSVG
 					className={`${styles.cardImageSectionHeart} ${'notActive'}`}
 				/>
 				<Image className={styles.image} src={image} alt='asdas' />
 			</div>
 			<div className={styles.cardDescriptionSection}>
-				<p>BLENDED SCOTCH WHISKY CUTTY SARK 0.7L</p>
+				<p>BLENDED SCOTCH WHISKY CUTTY SARK </p>
+				<p>0.7L</p>
 				<p>169lei</p>
-				<CardCartSVG className={styles.cardCartIcon} />
+
+				<CartSVG className={styles.cardCartIcon}></CartSVG>
 			</div>
 		</div>
 	)

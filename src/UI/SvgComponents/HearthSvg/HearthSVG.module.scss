@@ -1,0 +1,9 @@
+.liked {
+	fill: var(--mainGreenColor);
+	stroke: var(--mainGreenColor);
+}
+
+.isNotLiked {
+	fill: transparent;
+	stroke: var(--mainGreenColor);
+}
