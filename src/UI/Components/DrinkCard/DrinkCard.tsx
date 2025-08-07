@@ -11,31 +11,26 @@ import styles from './DrinkCard.module.scss'
 export const DrinkCard = () => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
+	const handleHearthClick = (
+		e: React.MouseEvent<HTMLDivElement, MouseEvent>
+	) => {
+		if (
+			(e.target as HTMLElement).tagName === 'path' ||
+			(e.target as HTMLElement).tagName === 'svg'
+		) {
+			return
+		} else {
+			setIsActive(prevState => !prevState)
+		}
+	}
+
 	return (
 		<div
 			className={`${styles.drinkCard} ${isActive && styles.drinkCardActive} ${
 				!isActive && styles.drinkCardHover
 			}`}
-			onMouseDown={e => {
-				if (
-					(e.target as HTMLElement).tagName === 'path' ||
-					(e.target as HTMLElement).tagName === 'svg'
-				) {
-					return
-				} else {
-					setIsActive(prevState => !prevState)
-				}
-			}}
-			onMouseUp={e => {
-				if (
-					(e.target as HTMLElement).tagName === 'path' ||
-					(e.target as HTMLElement).tagName === 'svg'
-				) {
-					return
-				} else {
-					setIsActive(prevState => !prevState)
-				}
-			}}
+			onMouseDown={handleHearthClick}
+			onMouseUp={handleHearthClick}
 		>
 			<div className={styles.cardImageSection}>
 				<HearthSVG
