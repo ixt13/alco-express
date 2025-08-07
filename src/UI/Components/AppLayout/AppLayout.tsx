@@ -1,6 +1,6 @@
 'use client'
 
-import { menuItems } from '@/config'
+import { menuItems, pathNames } from '@/config'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { FilterSVG } from '@/UI/SvgComponents/FilterSVG'
 import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
@@ -46,10 +46,10 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 				}}
 			>
 				<div className={styles.navTopGroup}>
-					<div className={styles.logoSection}>
+					<Link href={pathNames.home} className={styles.logoSection}>
 						<Logo className={styles.logo} />
 						<p>express</p>
-					</div>
+					</Link>
 					<div className={styles.menuButtonsGroup}>
 						<div onMouseDown={() => {}} className={styles.menuButton}>
 							<MenuSVG className={styles.menuIcon} />

@@ -21,6 +21,7 @@ export const HearthSVG = forwardRef<SVGSVGElement, iHearthSVG>(
 				fill='none'
 				xmlns='http://www.w3.org/2000/svg'
 				onClick={e => {
+					e.preventDefault()
 					e.stopPropagation()
 					setIsLiked(prevState => !prevState)
 				}}

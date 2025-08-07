@@ -5,14 +5,19 @@ import image from '@/assets/images/drinks/whisky/cuttySark.png'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
 import Image from 'next/image'
+
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import styles from './DrinkCard.module.scss'
 
 export const DrinkCard = () => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
+	const router = useRouter()
+
 	const handleHearthClick = (
-		e: React.MouseEvent<HTMLDivElement, MouseEvent>
+		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
 	) => {
 		if (
 			(e.target as HTMLElement).tagName === 'path' ||
@@ -25,7 +30,8 @@ export const DrinkCard = () => {
 	}
 
 	return (
-		<div
+		<Link
+			href={'/drinkinfo'}
 			className={`${styles.drinkCard} ${isActive && styles.drinkCardActive} ${
 				!isActive && styles.drinkCardHover
 			}`}
@@ -43,8 +49,8 @@ export const DrinkCard = () => {
 				<p>0.7L</p>
 				<p>169lei</p>
 
-				<CartSVG className={styles.cardCartIcon}></CartSVG>
+				<CartSVG className={styles.cardCartIcon} />
 			</div>
-		</div>
+		</Link>
 	)
 }

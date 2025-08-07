@@ -29,3 +29,5 @@ export const menuItems = [
 	'Tequila',
 	'Sucuri',
 ]
+
+export const pathNames = { home: '/', drinkInfo: '/drinkinfo' }
