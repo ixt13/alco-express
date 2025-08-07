@@ -2,11 +2,11 @@
 
 import bottleImage from '@/assets/images/drinks/whisky/cuttySark.png'
 
+import styles from '@/app/drinkInfo/page.module.scss'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
-import styles from './page.module.scss'
 
 export default function page() {
 	const likeRef = useRef<SVGSVGElement>(null)

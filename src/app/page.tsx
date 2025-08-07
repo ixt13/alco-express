@@ -12,6 +12,7 @@ export default function page() {
 			<DrinkCard></DrinkCard> <DrinkCard></DrinkCard>
 			<DrinkCard></DrinkCard>
 			<DrinkCard></DrinkCard>
+			<DrinkCard></DrinkCard>
 		</div>
 	)
 }
