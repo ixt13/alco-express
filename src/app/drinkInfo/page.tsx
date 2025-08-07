@@ -6,7 +6,7 @@ import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
-import styles from './drinkinfo.module.scss'
+import styles from './page.module.scss'
 
 export default function page() {
 	const likeRef = useRef<SVGSVGElement>(null)
