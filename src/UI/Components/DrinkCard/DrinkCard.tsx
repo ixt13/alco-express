@@ -6,6 +6,7 @@ import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
 import Image from 'next/image'
 
+import { pathNames } from '@/config'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
@@ -31,7 +32,7 @@ export const DrinkCard = () => {
 
 	return (
 		<Link
-			href={'/drinkinfo'}
+			href={pathNames.drinkInfo}
 			className={`${styles.drinkCard} ${isActive && styles.drinkCardActive} ${
 				!isActive && styles.drinkCardHover
 			}`}
