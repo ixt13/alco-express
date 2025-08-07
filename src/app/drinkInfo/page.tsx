@@ -33,13 +33,14 @@ export default function Page() {
 				<div className={styles.buttons}>
 					<div
 						onClick={() => {
-							likeRef.current &&
+							if (likeRef.current) {
 								likeRef.current.dispatchEvent(
 									new MouseEvent('click', {
 										bubbles: true,
 										cancelable: true,
 									})
 								)
+							}
 						}}
 						className={`${styles.likeGroup} ${
 							isActiveHearth && styles.drinkCardActive
