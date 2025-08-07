@@ -7,7 +7,7 @@ import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
 import styles from './drinkInfo.module.scss'
-export default function page() {
+export default function DrinkInfo() {
 	const likeRef = useRef<SVGSVGElement>(null)
 	const [isActiveHearth, setIsActiveHearth] = useState<boolean>(false)
 	const [isActiveCart, setIsActiveCart] = useState<boolean>(false)

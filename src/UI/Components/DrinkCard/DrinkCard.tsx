@@ -8,14 +8,11 @@ import Image from 'next/image'
 
 import { pathNames } from '@/config'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import styles from './DrinkCard.module.scss'
 
 export const DrinkCard = () => {
 	const [isActive, setIsActive] = useState<boolean>(false)
-
-	const router = useRouter()
 
 	const handleHearthClick = (
 		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
