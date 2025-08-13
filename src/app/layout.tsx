@@ -1,5 +1,4 @@
 import { AppLayout } from '@/UI/Components/AppLayout/AppLayout'
-import { Header } from '@/UI/Components/Header/Header'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './global.css'
@@ -32,8 +31,8 @@ export default function RootLayout({
 					position: 'relative',
 				}}
 			>
-				<Header />
 				<AppLayout> {children}</AppLayout>
+				{/* <Footer /> */}
 			</body>
 		</html>
 	)

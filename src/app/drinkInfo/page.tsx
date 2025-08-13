@@ -72,7 +72,7 @@ export default function DrinkInfo() {
 					</div>
 				</div>
 
-				<p className={styles.price}>149Lei</p>
+				<p className={styles.price}>149 Lei</p>
 			</div>
 		</div>
 	)

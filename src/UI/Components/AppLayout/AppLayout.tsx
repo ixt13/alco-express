@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import { CategoriesButton } from '../CategoriesButton/CategoriesButton'
+import { Footer } from '../Footer/Footer'
 import styles from './AppLayout.module.scss'
 
 interface iAppLayout {
@@ -18,57 +19,70 @@ interface iAppLayout {
 }
 
 export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
-	const stickyRef = useRef<HTMLDivElement>(null)
-	const [isSticky, setIsSticky] = useState(false)
 	const pathName = usePathname()
 	const cleanPathName = pathName.split('/').join('')
 
+	const headerRef = useRef<HTMLDivElement>(null)
+
+	const [showModalCartButton, setShowModalCartButton] = useState<boolean>(false)
+
 	useEffect(() => {
-		const handleScroll = () => {
-			if (!stickyRef.current) return
+		function handleScroll() {
+			const headerHeight = headerRef.current!.offsetHeight
 
-			const top = stickyRef.current.getBoundingClientRect().top
-			setIsSticky(top <= 0)
+			if (!headerRef.current) return
+
+			if (window.scrollY >= headerHeight) {
+				setShowModalCartButton(true)
+			} else {
+				setShowModalCartButton(false)
+			}
 		}
-		handleScroll()
-		window.addEventListener('scroll', handleScroll)
 
+		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
 
 	return (
 		<div className={styles.wrapper}>
-			<div
-				ref={stickyRef}
-				className={styles.mainNavSection}
-				style={{
-					...(isSticky ? { height: '100vh', borderRadius: '0px' } : {}),
-				}}
-			>
-				<div className={styles.navTopGroup}>
-					<Link href={pathNames.home} className={styles.logoSection}>
-						<Logo className={styles.logo} />
-						<p>express</p>
-					</Link>
-					<div className={styles.menuButtonsGroup}>
-						<div onMouseDown={() => {}} className={styles.menuButton}>
-							<MenuSVG className={styles.menuIcon} />
-							<span>Catalog</span>
-						</div>
-						<div className={styles.menuButton}>
-							<FilterSVG className={styles.menuIcon} />
-							<span>Filtre</span>
+			<div className={styles.fixedPos}>
+				<div className={styles.mainNavSection}>
+					<div className={styles.navTopGroup}>
+						<Link href={pathNames.home} className={styles.logoSection}>
+							<Logo className={styles.logo} />
+							<p>express</p>
+						</Link>
+						<div className={styles.menuButtonsGroup}>
+							<div onMouseDown={() => {}} className={styles.menuButton}>
+								<MenuSVG className={styles.menuIcon} />
+								<span>Catalog</span>
+							</div>
+							<div className={styles.menuButton}>
+								<FilterSVG className={styles.menuIcon} />
+								<span>Filtre</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className={styles.navBotSection}>
-					{menuItems.map((el, index) => (
-						<CategoriesButton el={el} key={index} />
-					))}
+					<div className={styles.navBotSection}>
+						{menuItems.map((el, index) => (
+							<CategoriesButton el={el} key={index} />
+						))}
+					</div>
 				</div>
 			</div>
+
 			<div className={styles.secondNavSection}>
-				<div className={styles.navBar}>
+				<div
+					className={`${styles.fixedButton} ${
+						showModalCartButton ? styles.show : styles.hide
+					} `}
+				>
+					<CartSVG className={styles.secondIcon} />
+					<div className={styles.logSectionCounter}>
+						<span>0</span>
+					</div>
+				</div>
+				<div ref={headerRef} className={styles.navBar}>
 					<div className={styles.searchSection}>
 						<input
 							className={styles.searchInput}
@@ -95,7 +109,6 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 						</div>
 					</div>
 				</div>
-
 				{pathName !== '/' ? (
 					<div className={styles.breadcrumbs}>
 						<Link href={'#'}>Pagina principală</Link>
@@ -106,8 +119,8 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 						AlcoExpress ®️ Magazin online de Bauturi Alcoolice în Moldova
 					</p>
 				)}
-
 				<div className={styles.childrenContainer}>{children}</div>
+				<Footer />
 			</div>
 		</div>
 	)

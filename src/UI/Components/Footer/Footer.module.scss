@@ -1,18 +1,20 @@
-.header {
-	background-color: var(--mainGreenColor);
-
+.footer {
+	background-color: var(--backgroundDarkColor);
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0.7rem 1.6rem 0.7rem 1.6rem;
+	margin: 44px 14px 0px 0px;
+	padding: 2px 14px 2px 14px;
+	border-radius: 8px 8px 0px 0px;
+	color: var(--secondTextColor);
 }
 
 .navTab {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	color: currentColor;
+
 	gap: 16px;
 	a {
 		font-size: var(--fontSizeStandart);
@@ -27,7 +29,7 @@
 }
 
 .icon {
-	color: var(--mainTextColor);
+	color: currentColor;
 	width: var(--iconSizeStandart);
 	height: var(--iconSizeStandart);
 }

@@ -2,17 +2,20 @@
 	flex: 1;
 	display: flex;
 	gap: 24px;
-	margin: 14px 24px 0px 0px;
+}
+
+.fixedPos {
+	min-width: 20vw;
+
+	height: 100vh;
 }
 .mainNavSection {
-	transition: all 0.2s ease;
 	width: 20vw;
-	height: 84vh;
-	position: sticky;
-	top: 0px;
+	height: 100vh;
+
+	position: fixed;
 
 	background-color: var(--backgroundDarkColor);
-	border-radius: 0px 8px 8px 0px;
 	display: flex;
 	flex-direction: column;
 }
@@ -25,7 +28,7 @@
 }
 
 .logoSection {
-	margin-top: 14px;
+	margin-top: 34px;
 	display: flex;
 	flex-direction: row;
 	color: var(--logoColor) !important;
@@ -44,7 +47,9 @@
 }
 
 .secondNavSection {
-	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .menuButtonsGroup {
@@ -71,7 +76,7 @@
 	gap: 10px;
 	padding: 6px;
 	cursor: pointer;
-	transition: all 0.1s ease;
+
 	border-radius: 8px;
 	span {
 		color: var(--secondTextColor);
@@ -93,6 +98,7 @@
 }
 
 .navBar {
+	margin: 14px 14px 0px 0px;
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--backgroundDarkColor);
@@ -198,4 +204,47 @@
 }
 .childrenContainer {
 	margin: 12px;
+}
+
+.fixedButton {
+	transition: all 0.2s ease;
+	position: fixed;
+	top: 40px;
+	right: 40px;
+	z-index: 3;
+	background-color: var(--mainGreenColor);
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	padding: 4px;
+
+	&:hover {
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	}
+	&:active {
+		transition: none;
+		box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+			rgb(209, 213, 219) 0px 0px 0px 1px inset;
+	}
+	span {
+		color: var(--secondTextColor);
+		font-size: var(--fontSizeStandart);
+	}
+	.logSectionCounter {
+		background-color: var(--backgroundDarkColor);
+	}
+}
+
+.show {
+	visibility: visible;
+	opacity: 100;
+}
+
+.hide {
+	visibility: hidden;
+	opacity: 0;
 }

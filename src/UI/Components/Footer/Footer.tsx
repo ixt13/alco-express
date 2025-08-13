@@ -6,14 +6,14 @@ import { InstagramSVG } from '@/UI/SvgComponents/InstagramSVG'
 import { TikTokSVG } from '@/UI/SvgComponents/TikTokSVG'
 import Link from 'next/link'
 import { useRef } from 'react'
-import styles from './Header.module.scss'
-export const Header = () => {
+import styles from './Footer.module.scss'
+export const Footer = () => {
 	const phoneCallRef = useRef<HTMLAnchorElement>(null)
 
 	const handleClick = () => phoneCallRef.current?.click()
 
 	return (
-		<div className={styles.header}>
+		<div className={styles.footer}>
 			<div className={styles.navTab}>
 				{navTabLinks &&
 					navTabLinks.map((el, index) => (
