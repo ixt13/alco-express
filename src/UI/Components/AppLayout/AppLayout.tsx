@@ -3,12 +3,12 @@
 import { menuItems, pathNames } from '@/config'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { FilterSVG } from '@/UI/SvgComponents/FilterSVG'
-import { HearthSVG } from '@/UI/SvgComponents/HearthSvg/HearthSVG'
+import { HearhSVGPassive } from '@/UI/SvgComponents/HearhSVGPassive'
 import { Logo } from '@/UI/SvgComponents/LogoSVG'
 import { MenuSVG } from '@/UI/SvgComponents/MenuSVG'
 import { UserSVG } from '@/UI/SvgComponents/UserSVG'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import { CategoriesButton } from '../CategoriesButton/CategoriesButton'
 import { Footer } from '../Footer/Footer'
@@ -20,6 +20,7 @@ interface iAppLayout {
 
 export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const pathName = usePathname()
+	const router = useRouter()
 	const cleanPathName = pathName.split('/').join('')
 
 	const headerRef = useRef<HTMLDivElement>(null)
@@ -95,18 +96,23 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 							<UserSVG className={styles.secondIcon} />
 							<span>{`AUTENTIFICARE`}</span>
 						</div>
-						<div className={styles.userSection}>
-							<HearthSVG className={styles.hearthIcon} />
+						<Link href={pathNames.cart} className={styles.userSection}>
+							<HearhSVGPassive className={styles.hearthIcon} />
+
 							<div className={styles.logSectionCounter}>
 								<span>0</span>
 							</div>
-						</div>
-						<div className={styles.userSection}>
+						</Link>
+						<Link
+							href={pathNames.cart}
+							onClick={() => {}}
+							className={styles.userSection}
+						>
 							<CartSVG className={styles.secondIcon}></CartSVG>
 							<div className={styles.logSectionCounter}>
 								<span>0</span>
 							</div>
-						</div>
+						</Link>
 					</div>
 				</div>
 				{pathName !== '/' ? (

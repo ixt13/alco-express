@@ -2,8 +2,6 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	user-select: none;
-	-webkit-user-select: none;
 }
 
 :root {
@@ -24,6 +22,7 @@
 	--iconSizeStandart: 24px;
 	--iconSizeStandart_sm: 28px;
 	--iconSizeStandart_mid: 34px;
+	--iconSizeStandart_big: 74px;
 	--logoColor: black;
 }
 
@@ -41,17 +40,19 @@ textarea {
 	background-color: transparent;
 	outline: none;
 	border: none;
+	font-family: inherit;
 }
 
 button:active,
 button:visited {
-	background-color: transparent !important;
-	box-shadow: none !important;
-	outline: none !important;
+	background-color: transparent;
+	box-shadow: none;
+	outline: none;
 	text-decoration: none;
 	color: var(--mainTextColor);
 	background-color: var(--mainTextColor);
 	text-decoration: none;
+	font-family: inherit;
 }
 
 a,
@@ -60,9 +61,11 @@ a:hover,
 a:active {
 	color: currentColor;
 	text-decoration: none;
+	font-family: inherit;
 }
 
 button:focus,
 a:focus {
 	outline: none;
+	font-family: inherit;
 }

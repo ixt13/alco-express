@@ -3,10 +3,6 @@ import { iSVG } from './type'
 export const CartSVG = ({ className }: iSVG) => {
 	return (
 		<svg
-			onClick={e => {
-				e.preventDefault()
-				e.stopPropagation()
-			}}
 			className={className}
 			width='10px'
 			height='10px'

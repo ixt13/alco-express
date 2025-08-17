@@ -50,6 +50,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin-right: 24px;
 }
 
 .menuButtonsGroup {
@@ -98,7 +99,7 @@
 }
 
 .navBar {
-	margin: 14px 14px 0px 0px;
+	margin: 14px 0px 0px 0px;
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--backgroundDarkColor);
@@ -151,9 +152,10 @@
 	height: var(--iconSizeStandart_mid);
 }
 .hearthIcon {
-	fill: var(--secondTextColor);
 	width: var(--iconSizeStandart_mid);
 	height: var(--iconSizeStandart_mid);
+	stroke: var(--secondTextColor);
+	stroke-width: 40px;
 }
 
 .logSection {
@@ -203,7 +205,8 @@
 	font-weight: 500;
 }
 .childrenContainer {
-	margin: 12px;
+	flex: 1;
+	margin: 24px 0px 24px 0px;
 }
 
 .fixedButton {
