@@ -2,13 +2,15 @@
 import { pathNames } from '@/config'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import Link from 'next/link'
+import { useState } from 'react'
 import styles from './page.module.scss'
 
 export default function Cart() {
-	const data: any[] = []
+	const [data, setData] = useState([])
+
 	return (
 		<div className={styles.wrapper}>
-			{data ? (
+			{data.length >= 1 ? (
 				<div>ss</div>
 			) : (
 				<div className={styles.emptyCartBox}>

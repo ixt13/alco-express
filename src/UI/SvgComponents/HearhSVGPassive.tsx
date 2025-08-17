@@ -5,7 +5,8 @@ interface iHearthSVG {
 export const HearhSVGPassive = ({ className }: iHearthSVG) => {
 	return (
 		<svg
-			className={`${className}`}
+			className={className}
+			stroke='currentColor'
 			width='10'
 			height='10'
 			viewBox='0 0 800 800'

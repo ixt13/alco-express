@@ -1,0 +1,62 @@
+.wrapper {
+	width: 100%;
+	height: 100%;
+	color: var(--secondTextColor);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.emptyCartBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 120px;
+	background-color: var(--backgroundDarkColor);
+	border-radius: 8px;
+	gap: 34px;
+}
+
+.textContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	& *:nth-child(2) {
+		font-size: var(--fontSizeStandart_big);
+		font-weight: 500;
+	}
+
+	& *:nth-child(3) {
+		font-size: var(--fontSizeStandart);
+	}
+}
+
+.button {
+	background-color: var(--mainGreenColor);
+	color: var(--thirdTextColor);
+	border-radius: 8px;
+	cursor: pointer;
+	padding: 14px;
+	font-size: var(--fontSizeStandart);
+	transition: all 0.2s ease;
+
+	&:hover {
+		border-radius: 8px;
+		box-shadow: 0 6px 24px #0000000d, 0 0 0 1px #00000014;
+	}
+
+	&:active {
+		color: currentColor;
+		transition: none;
+		opacity: 70%;
+		background-color: var(--mainGreenColor);
+	}
+}
+
+.cartIcon {
+	color: var(--mainGreenColor);
+	width: var(--iconSizeStandart_big);
+	height: var(--iconSizeStandart_big);
+	stroke-width: 40px;
+}

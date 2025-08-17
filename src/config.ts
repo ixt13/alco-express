@@ -30,4 +30,9 @@ export const menuItems = [
 	'Sucuri',
 ]
 
-export const pathNames = { home: '/', drinkInfo: '/drinkInfo', cart: '/cart' }
+export const pathNames = {
+	home: '/',
+	drinkInfo: '/drinkInfo',
+	cart: '/cart',
+	favorites: '/favorites',
+}

@@ -1,6 +1,7 @@
 'use client'
 
 import { menuItems, pathNames } from '@/config'
+import { AuthModal } from '@/UI/Modals/AuthModal/AuthModal'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import { FilterSVG } from '@/UI/SvgComponents/FilterSVG'
 import { HearhSVGPassive } from '@/UI/SvgComponents/HearhSVGPassive'
@@ -18,6 +19,8 @@ interface iAppLayout {
 	children?: ReactNode
 }
 
+export type TLogReg = 'log' | 'reg'
+
 export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const pathName = usePathname()
 
@@ -26,6 +29,10 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const headerRef = useRef<HTMLDivElement>(null)
 
 	const [showModalCartButton, setShowModalCartButton] = useState<boolean>(false)
+
+	const [logReg, setLogReg] = useState<TLogReg>('log')
+
+	const [isVisible, setIsVisible] = useState<boolean>(false)
 
 	useEffect(() => {
 		function handleScroll() {
@@ -92,11 +99,16 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 						/>
 					</div>
 					<div className={styles.logSection}>
-						<div className={styles.userSection}>
+						<div
+							onClick={() => {
+								setIsVisible(true)
+							}}
+							className={styles.userSection}
+						>
 							<UserSVG className={styles.secondIcon} />
 							<span>{`AUTENTIFICARE`}</span>
 						</div>
-						<Link href={pathNames.cart} className={styles.userSection}>
+						<Link href={pathNames.favorites} className={styles.userSection}>
 							<HearhSVGPassive className={styles.hearthIcon} />
 
 							<div className={styles.logSectionCounter}>
@@ -127,6 +139,12 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 				)}
 				<div className={styles.childrenContainer}>{children}</div>
 				<Footer />
+				<AuthModal
+					logReg={logReg}
+					setLogReg={setLogReg}
+					isVisible={isVisible}
+					setIsVisible={setIsVisible}
+				/>
 			</div>
 		</div>
 	)
