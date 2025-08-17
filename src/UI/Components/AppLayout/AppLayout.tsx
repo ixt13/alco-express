@@ -8,7 +8,7 @@ import { Logo } from '@/UI/SvgComponents/LogoSVG'
 import { MenuSVG } from '@/UI/SvgComponents/MenuSVG'
 import { UserSVG } from '@/UI/SvgComponents/UserSVG'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import { CategoriesButton } from '../CategoriesButton/CategoriesButton'
 import { Footer } from '../Footer/Footer'
@@ -20,7 +20,7 @@ interface iAppLayout {
 
 export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const pathName = usePathname()
-	const router = useRouter()
+
 	const cleanPathName = pathName.split('/').join('')
 
 	const headerRef = useRef<HTMLDivElement>(null)

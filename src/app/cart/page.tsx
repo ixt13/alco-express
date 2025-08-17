@@ -2,11 +2,10 @@
 import { pathNames } from '@/config'
 import { CartSVG } from '@/UI/SvgComponents/CartSVG'
 import Link from 'next/link'
-import { useState } from 'react'
 import styles from './page.module.scss'
 
 export default function Cart() {
-	const [data, setData] = useState(false)
+	const data: any[] = []
 	return (
 		<div className={styles.wrapper}>
 			{data ? (
