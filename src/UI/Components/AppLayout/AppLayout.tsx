@@ -12,7 +12,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import { CategoriesButton } from '../CategoriesButton/CategoriesButton'
-import { Footer } from '../Footer/Footer'
 import styles from './AppLayout.module.scss'
 
 interface iAppLayout {
@@ -24,7 +23,22 @@ export type TLogReg = 'log' | 'reg'
 export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 	const pathName = usePathname()
 
-	const cleanPathName = pathName.split('/').join('')
+	const cleanBreadcrumbs = () => {
+		const pathNames = pathName.split('/').filter(Boolean) // сразу удаляем пустые строки
+
+		return pathNames.map((el, index) => {
+			const isLast = index === pathNames.length - 1
+
+			return (
+				<p
+					key={index}
+					className={!isLast ? styles.breadcrumbsSeparatorLine : undefined}
+				>
+					{decodeURIComponent(el.toLowerCase())}
+				</p>
+			)
+		})
+	}
 
 	const headerRef = useRef<HTMLDivElement>(null)
 
@@ -40,7 +54,7 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 
 			if (!headerRef.current) return
 
-			if (window.scrollY >= headerHeight) {
+			if (window.scrollY >= headerHeight && pathName !== '/cart') {
 				setShowModalCartButton(true)
 			} else {
 				setShowModalCartButton(false)
@@ -49,7 +63,7 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
-	}, [])
+	}, [pathName])
 
 	return (
 		<div className={styles.wrapper}>
@@ -129,8 +143,10 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 				</div>
 				{pathName !== '/' ? (
 					<div className={styles.breadcrumbs}>
-						<Link href={'#'}>Pagina principală</Link>
-						<p>{cleanPathName}</p>
+						<Link href={'#'} className={styles.breadcrumbsSeparatorLine}>
+							Pagina principală
+						</Link>
+						{cleanBreadcrumbs()}
 					</div>
 				) : (
 					<p className={styles.siteInfo}>
@@ -138,7 +154,7 @@ export const AppLayout = ({ children }: Readonly<iAppLayout>) => {
 					</p>
 				)}
 				<div className={styles.childrenContainer}>{children}</div>
-				<Footer />
+
 				<AuthModal
 					logReg={logReg}
 					setLogReg={setLogReg}

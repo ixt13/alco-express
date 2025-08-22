@@ -1,5 +1,5 @@
 .drinkCard {
-	height: 320px;
+	height: 360px;
 	display: flex;
 	width: 100%;
 	border-radius: 8px;
@@ -40,9 +40,10 @@
 .cardDescriptionSection {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: start;
 	position: relative;
 	height: 40%;
+	gap: 8px;
 	color: var(--secondTextColor);
 	font-size: var(--fontSizeStandart_sm);
 
@@ -85,10 +86,19 @@
 	}
 }
 
-.cardCartIcon {
+.dinamicInfo {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.cardCartIcon {
 	height: var(--iconSizeStandart_mid);
 	width: var(--iconSizeStandart_mid);
 	transition: all 0.1s ease;
@@ -105,4 +115,49 @@
 	&:active {
 		opacity: 0.7;
 	}
+}
+
+.cardCartIconSelected {
+	height: var(--iconSizeStandart_mid);
+	width: var(--iconSizeStandart_mid);
+	transition: all 0.1s ease;
+	border-radius: 8px;
+	padding: 4px;
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+		rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	background-color: var(--mainGreenColor);
+	color: var(--mainTextColor);
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+}
+
+.quantity {
+	width: 80px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	svg {
+		width: var(--iconSizeStandart_sm_extra);
+		height: var(--iconSizeStandart_sm_extra);
+		transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		&:hover {
+			transform: scale(1.2);
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
+	}
+}
+
+.price {
+	font-size: var(--fontSizeStandart_mid);
 }

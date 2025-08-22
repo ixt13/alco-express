@@ -47,6 +47,7 @@
 }
 
 .secondNavSection {
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -192,10 +193,12 @@
 	}
 }
 
-.breadcrumbs > :not(:last-child)::after {
-	content: '|';
-	margin: 0 4px;
-	color: var(--secondTextColor);
+.breadcrumbsSeparatorLine {
+	&::after {
+		content: '|';
+		margin-left: 4px;
+		font-weight: 500;
+	}
 }
 
 .siteInfo {

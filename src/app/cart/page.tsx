@@ -1,31 +1,5 @@
-'use client'
-import { pathNames } from '@/config'
-import { CartSVG } from '@/UI/SvgComponents/CartSVG'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import styles from './page.module.scss'
+import Cart from '@/UI/Screens/Cart/Cart'
 
-export default function Cart() {
-	const [data, setData] = useState([])
-	useEffect(() => {
-		setData([])
-	}, [])
-	return (
-		<div className={styles.wrapper}>
-			{data.length >= 1 ? (
-				<div>ss</div>
-			) : (
-				<div className={styles.emptyCartBox}>
-					<div className={styles.textContent}>
-						<CartSVG className={styles.cartIcon}></CartSVG>
-						<div>Ваша корзина пуста</div>
-						<div>Добавьте товары для покупки</div>
-					</div>
-					<Link href={pathNames.home}>
-						<button className={styles.button}>Продолжить покупки</button>
-					</Link>
-				</div>
-			)}
-		</div>
-	)
+export default function Page() {
+	return <Cart />
 }

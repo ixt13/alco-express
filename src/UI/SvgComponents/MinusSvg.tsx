@@ -1,11 +1,22 @@
+import { Dispatch, SetStateAction } from 'react'
 import { iSVG } from './type'
+export interface iMinusSvg extends iSVG {
+	onClick: Dispatch<SetStateAction<number>>
+}
 
-export const MinusSvg = ({ className }: iSVG) => {
+export const MinusSvg = ({ className, onClick }: iMinusSvg) => {
 	return (
 		<svg
+			onClick={e => {
+				e.preventDefault()
+				e.stopPropagation()
+				onClick(prevState => {
+					return prevState - 1
+				})
+			}}
 			className={className}
-			height={24}
-			width={24}
+			height='10'
+			width='10'
 			viewBox='0 0 24 24'
 			xmlns='http://www.w3.org/2000/svg'
 		>

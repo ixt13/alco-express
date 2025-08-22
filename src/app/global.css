@@ -9,17 +9,24 @@
 	--secondTextColor: #565758;
 	--thirdTextColor: #4e4e4e;
 	--mainGreenColor: #41b757;
+
 	--mainGreenColor07: rgba(65, 183, 87, 0.7);
 	--mainGreenColor03: rgba(65, 183, 87, 0.3);
+
 	--mainBodyColor: #eeeeee;
 	--secondWhiteColor: #e3e3e3;
+
 	--backgroundDarkColor: #cbcbcb;
+
 	--borderColorMain: #d9d9d9;
+
 	--fontSizeStandart: 14px;
 	--fontSizeStandart_sm: 16px;
 	--fontSizeStandart_mid: 18px;
 	--fontSizeStandart_big: 24px;
 	--iconSizeStandart: 24px;
+
+	--iconSizeStandart_sm_extra: 22px;
 	--iconSizeStandart_sm: 28px;
 	--iconSizeStandart_mid: 34px;
 	--iconSizeStandart_big: 74px;

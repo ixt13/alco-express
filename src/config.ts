@@ -20,6 +20,7 @@ export const headerInputPlaceHolder = {
 }
 
 export const menuItems = [
+	'Toate Produsele',
 	'Vodka',
 	'Coniac',
 	'Brandy',
@@ -35,4 +36,5 @@ export const pathNames = {
 	drinkInfo: '/drinkInfo',
 	cart: '/cart',
 	favorites: '/favorites',
+	products: '/products',
 }

@@ -1,18 +1,5 @@
-import styles from './page.module.scss'
-
-import { DrinkCard } from '@/UI/Components/DrinkCard/DrinkCard'
+import { Home } from '@/UI/Screens/Home/Home'
 
 export default function Page() {
-	return (
-		<div className={styles.grid}>
-			<DrinkCard></DrinkCard> <DrinkCard></DrinkCard> <DrinkCard></DrinkCard>
-			<DrinkCard></DrinkCard> <DrinkCard></DrinkCard>
-			<DrinkCard></DrinkCard>
-			<DrinkCard></DrinkCard>
-			<DrinkCard></DrinkCard> <DrinkCard></DrinkCard>
-			<DrinkCard></DrinkCard>
-			<DrinkCard></DrinkCard>
-			<DrinkCard></DrinkCard>
-		</div>
-	)
+	return <Home></Home>
 }

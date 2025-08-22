@@ -1,6 +1,7 @@
 'use client'
+import { pathNames } from '@/config'
 import { ArrowSVG } from '@/UI/SvgComponents/ArrowSVG'
-import { useState } from 'react'
+import Link from 'next/link'
 import styles from './CategoriesButton.module.scss'
 
 interface iCategoriesButton {
@@ -8,22 +9,13 @@ interface iCategoriesButton {
 }
 
 export const CategoriesButton = ({ el }: iCategoriesButton) => {
-	const [isHover, setIsHover] = useState(false)
 	return (
-		<div
+		<Link
+			href={pathNames.products + '/' + el}
 			className={styles.categoriesButton}
-			onMouseEnter={() => setIsHover(state => !state)}
-			onMouseLeave={() => setIsHover(state => !state)}
 		>
 			<p>{el}</p>
-			<ArrowSVG
-				className={`${styles.categoriesButtonIcon} ${
-					!isHover && styles.fadeOut
-				}`}
-				style={{
-					...(isHover ? { visibility: 'visible' } : { visibility: 'hidden' }),
-				}}
-			/>
-		</div>
+			<ArrowSVG className={`${styles.categoriesButtonIcon}`} />
+		</Link>
 	)
 }
